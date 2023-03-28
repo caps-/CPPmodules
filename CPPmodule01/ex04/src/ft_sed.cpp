@@ -6,12 +6,14 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 17:00:37 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/03/28 18:49:19 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/03/28 19:29:57 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_sed.hpp"
 
+/* For this bit of code std::strng::npos just means "end of the string, so the
+ * while loop condition is saying it'll do all the things while  */
 std::string	ft_replace(std::string line, std::string s1, std::string s2)
 {
 	unsigned long	position = 0;
@@ -25,7 +27,8 @@ std::string	ft_replace(std::string line, std::string s1, std::string s2)
 	return (line);
 }
 
-void	ft_sed(std::string filename, std::string s1, std::string s2)
+/* */
+int	ft_sed(std::string filename, std::string s1, std::string s2)
 {
 	std::string		line; //the string/line we need to find with getline()
 	std::ifstream	ifs(filename); //input file
@@ -34,7 +37,7 @@ void	ft_sed(std::string filename, std::string s1, std::string s2)
 	if (!ifs.is_open())//return an error msg if the input file can't be opened
 	{
 		std::cout << RED << ST03 << RST << std::endl;
-		exit(0);
+		return(1);
 	}
 	while (std::getline(ifs, line))//find the line in the input file stream
 	{
@@ -43,4 +46,5 @@ void	ft_sed(std::string filename, std::string s1, std::string s2)
 	}
 	ifs.close(); //close input stream
 	ofs.close(); //close output stream
+	return(0);
 }
