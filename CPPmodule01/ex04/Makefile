@@ -6,12 +6,12 @@
 #    By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/20 16:15:59 by pwhittin          #+#    #+#              #
-#    Updated: 2023/03/28 16:12:52 by pwhittin         ###   ########.fr        #
+#    Updated: 2023/03/28 16:41:35 by pwhittin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #name
-NAME	 = sed
+NAME	 = ft_sed
 
 #directories
 SRC_DIR	= src
