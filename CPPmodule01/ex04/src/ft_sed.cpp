@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 17:00:37 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/03/28 18:30:17 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/03/28 18:49:19 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,13 @@ void	ft_sed(std::string filename, std::string s1, std::string s2)
 	if (!ifs.is_open())//return an error msg if the input file can't be opened
 	{
 		std::cout << RED << ST03 << RST << std::endl;
-		return ;
+		exit(0);
 	}
 	while (std::getline(ifs, line))//find the line in the input file stream
-			ofs << ft_replace(line, s1, s2) << std::endl; //replace!
-
+	{
+		ofs << ft_replace(line, s1, s2) << std::endl; //replace!
+		std::cout << GRN << ST04 << filename << ST05 << RST << std::endl;
+	}
 	ifs.close(); //close input stream
 	ofs.close(); //close output stream
 }

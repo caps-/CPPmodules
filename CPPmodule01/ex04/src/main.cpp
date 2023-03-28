@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 16:27:43 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/03/28 18:26:28 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/03/28 18:42:29 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@
 
 int	main(int argc, char **argv)
 {
-//	std::string	filename = argv[1];
+	std::string	filename;
 //	std::string s1 = argv[2];
 //	std::string	s2 = argv[3];
 
@@ -40,7 +40,11 @@ int	main(int argc, char **argv)
 		if (!argv[2][0] || !argv[3][0])
 				std::cout << RED << ST01 << std::endl;
 		else
+		{
+			filename = argv[1];
 			ft_sed(argv[1], argv[2], argv[3]);
+//			std::cout << GRN << ST04 << filename << ST05 << RST << std::endl;
+		}
 	}
 	else
 		std::cout << YEL << ST02 << RST << std::endl;
