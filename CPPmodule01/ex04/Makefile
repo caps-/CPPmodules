@@ -6,7 +6,7 @@
 #    By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/20 16:15:59 by pwhittin          #+#    #+#              #
-#    Updated: 2023/03/28 16:41:35 by pwhittin         ###   ########.fr        #
+#    Updated: 2023/03/28 18:31:29 by pwhittin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ CC		= c++
 CFLAGS	= -Wall -Werror -Wextra -std=c++98
 
 #source files
-SRC		= main.cpp
+SRC		= main.cpp \
+		  ft_sed.cpp
 
 SRCS	= $(addprefix $(SRC_DIR)/,$(SRC))
 
@@ -52,7 +53,15 @@ clean:
 	@echo "$(GRN)All clean!$(RESET)"
 	@echo "$(YEL)-----------------------------------------------------$(RESET)"
 
-re:
-	clean all
+fclean:
+	@clear
+	@rm $(NAME)
+	@rm *.replace
+	@echo "$(YEL)-----------------------------------------------------$(RESET)"
+	@echo "$(GRN)All clean!$(RESET)"
+	@echo "$(YEL)-----------------------------------------------------$(RESET)"
 
-.PHONY: all, clean, re
+re:
+	fclean all
+
+.PHONY: all, clean, fclean, re

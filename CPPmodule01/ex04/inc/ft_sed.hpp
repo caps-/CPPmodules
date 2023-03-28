@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 16:31:15 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/03/28 16:56:04 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/03/28 18:26:00 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,10 @@
 # define BAL	"-----------------------------------------------------------"
 
 /* Messages to print */
-# define ST01 "Enter the filename: "
-# define ST02 "Enter the string you want replaced : "
-# define ST03 "Enter the string to replace it with: "
+# define ST01 "Error: Must include a string to replace and a replacement for it."
+# define ST02 "Usage: ./ft_sed <string to replace> <replacement string>"
+# define ST03 "Error: can't open the input file."
+
+void	ft_sed(std::string filename, std::string s1, std::string s2);
 
 #endif
