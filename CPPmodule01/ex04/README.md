@@ -2,3 +2,4 @@
 
 - man sed
 - [C++ Files and Streams](https://www.tutorialspoint.com/cplusplus/cpp_files_streams.htm)
+- [Input/output with files](https://cplusplus.com/doc/tutorial/files/)
