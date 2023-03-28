@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 16:31:15 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/03/28 18:40:28 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/03/28 18:54:12 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@
 /* Messages to print */
 # define ST01 "Error: Must include a string to replace and a replacement for it."
 # define ST02 "Usage: ./ft_sed <filename> <string to replace> <replacement string>"
-# define ST03 "Error: can't open the input file."
+# define ST03 "Error: can't open the input file. New one written anyway."
 # define ST04 "Done, changes have been written to a new file called "
 # define ST05 ".replace!"
 
