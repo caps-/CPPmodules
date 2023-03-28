@@ -9,3 +9,10 @@
 ## Some shit to read
 - [Constructor Initialization
   Lists](https://faculty.cs.niu.edu/~mcmahon/CS241/Notes/constructor_initializer.html)
+
+## repos
+
+- https://github.com/achrafelkhnissi/CPP_Modules/tree/master/Module_01
+- https://github.com/barimehdi77/CPP-Modules/tree/main/CPP-Module-01 (better)
+- https://github.com/0xPacman/CPP
+- https://github.com/Hevhove/42/tree/main/cpp/cpp01
