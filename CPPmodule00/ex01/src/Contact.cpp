@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 15:45:20 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/03/08 21:26:38 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/03/28 14:56:36 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	Contact::setNickName(void)
 {
 	std::cout << MAG << "Nickname: " << RST;
 	std::getline(std::cin, nickName);
-	while (lastName.empty())
+	while (nickName.empty())
 	{
 		std::cout << RED "Please enter a nickname: " << RST;
 		std::getline(std::cin, nickName);
