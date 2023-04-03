@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 06:03:19 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/03 11:18:55 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/03 16:11:30 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@
 # define b_CYN "\033[1m\033[36m"
 # define b_WHT "\033[1m\033[37m"
 
+# define MSG_D "Something about extra bacon and burgers idk"
+# define MSG_I "More bacon blah blah"
+# define MSG_W "Give free bacon please"
+# define MSG_E "Unacceptable!"
+
 /* Big ass line */
 # define BAL	"-----------------------------------------------------------"
 
@@ -45,14 +50,12 @@ class Harl
 		void	info(void);
 		void	warning(void);
 		void	error(void);
+		void	(Harl::*fptr[4])(void); //array of pointers to member funcs
 
 	public:
 		Harl();
 		~Harl();
 		void	complain(std::string level);
-}
-
-/* Function pointer. Obviously. */
-typedef	void	functionPointer(Harl::functionPointer)();
+};
 
 #endif

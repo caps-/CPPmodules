@@ -6,7 +6,7 @@
 #    By: pwhittin <pwhittin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/20 16:15:59 by pwhittin          #+#    #+#              #
-#    Updated: 2023/03/30 13:21:56 by pwhittin         ###   ########.fr        #
+#    Updated: 2023/04/03 16:10:20 by pwhittin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ CC		= c++
 CFLAGS	= -Wall -Werror -Wextra -std=c++98
 
 #source files
-SRC		= main.cpp
+SRC		= main.cpp \
+		  Harl.cpp
 
 SRCS	= $(addprefix $(SRC_DIR)/,$(SRC))
 
