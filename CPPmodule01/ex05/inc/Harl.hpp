@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 06:03:19 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/03/29 06:58:11 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/03 11:18:55 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ class Harl
 		void	complain(std::string level);
 }
 
-
+/* Function pointer. Obviously. */
+typedef	void	functionPointer(Harl::functionPointer)();
 
 #endif
