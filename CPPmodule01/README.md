@@ -5,6 +5,7 @@
 - [Exercise 02](https://github.com/caps-/CPPmodule01/tree/main/ex02): HI THIS IS BRAIN
 - [Exercise 03](https://github.com/caps-/CPPmodule01/tree/main/ex03): Unnecessary Violence
 - [Exercise 04](https://github.com/caps-/CPPmodule01/tree/main/ex04): Sed is for losers
+- [Exercise 05](https://github.com/caps-/CPPmodule01/tree/main/ex05): Harl 2.0
 
 ## Some shit to read
 - [Constructor Initialization
