@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 18:41:38 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/04 18:45:23 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/04 19:03:31 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,17 @@
 
 /* Big ass line  */
 # define BAL	"-----------------------------------------------------------"
+
+class	Fixed
+{
+	public:
+		Fixed();
+		Fixed(const Fixed &f); //f for fixed? Is this how it works?
+		~Fixed();
+
+	private:
+		int					_fixedPointValue;
+		static const int	_fractionalBits = 8;
+}
 
 #endif
