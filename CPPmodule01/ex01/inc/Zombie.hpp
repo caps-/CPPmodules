@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 18:45:54 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/03/21 20:17:17 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/04 16:52:37 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@
 # define b_WHT "\033[1m\033[37m"
 
 /* Error message */
-# define MSG_ERR	"A zombie horde needs more than 1 zombie, try again!"
+# define MSG_ERR	"What? Enter a number, a digit, not characters. Exiting."
 
 /* Zombie messages */
 # define MSG01	"Zombie created."
