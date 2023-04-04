@@ -6,7 +6,7 @@
 #    By: pwhittin <pwhittin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/20 16:15:59 by pwhittin          #+#    #+#              #
-#    Updated: 2023/04/03 16:43:30 by pwhittin         ###   ########.fr        #
+#    Updated: 2023/04/04 16:17:23 by pwhittin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,15 +53,7 @@ clean:
 	@echo "$(GRN)All clean!$(RESET)"
 	@echo "$(YEL)-----------------------------------------------------$(RESET)"
 
-fclean:
-	@clear
-	@rm $(NAME)
-	@rm *.replace
-	@echo "$(YEL)-----------------------------------------------------$(RESET)"
-	@echo "$(GRN)All clean!$(RESET)"
-	@echo "$(YEL)-----------------------------------------------------$(RESET)"
-
 re:
-	fclean all
+	clean all
 
 .PHONY: all, clean, fclean, re
