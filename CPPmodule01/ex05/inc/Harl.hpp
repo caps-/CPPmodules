@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 06:03:19 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/03 16:11:30 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/04 16:11:11 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@
 class Harl
 {
 	private:
-		void	debug(void);
-		void	info(void);
-		void	warning(void);
-		void	error(void);
+		void	_debug(void);
+		void	_info(void);
+		void	_warning(void);
+		void	_error(void);
 		void	(Harl::*fptr[4])(void); //array of pointers to member funcs
 
 	public:

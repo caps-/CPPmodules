@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 15:44:05 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/03 16:18:38 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/04 16:12:13 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,35 @@
 
 Harl::Harl()
 {
-	this->fptr[0] = &Harl::debug;
-	this->fptr[1] = &Harl::info;
-	this->fptr[2] = &Harl::warning;
-	this->fptr[3] = &Harl::error;
+	this->fptr[0] = &Harl::_debug;
+	this->fptr[1] = &Harl::_info;
+	this->fptr[2] = &Harl::_warning;
+	this->fptr[3] = &Harl::_error;
 }
 
 Harl::~Harl()
 {
 }
 
-void	Harl::debug()
+void	Harl::_debug()
 {
 	std::cout << YEL << "[DEBUG] ";
 	std::cout << MAG << MSG_D  << RST << std::endl;
 }
 
-void	Harl::info()
+void	Harl::_info()
 {
 	std::cout << YEL << "[INFO] ";
 	std::cout << MAG << MSG_I  << RST << std::endl;
 }
 
-void	Harl::warning()
+void	Harl::_warning()
 {
 	std::cout << YEL << "[WARNING] ";
 	std::cout << MAG << MSG_W  << RST << std::endl;
 }
 
-void	Harl::error()
+void	Harl::_error()
 {
 	std::cout << YEL << "[ERROR] ";
 	std::cout << MAG << MSG_E  << RST << std::endl;
