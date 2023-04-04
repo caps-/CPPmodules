@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 06:03:19 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/04 16:09:52 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/04 17:59:40 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ class Harl
 		void	_info(void);
 		void	_warning(void);
 		void	_error(void);
-//		void	(Harl::*fptr[4])(void); //array of pointers to member funcs
 
 	public:
 		Harl();

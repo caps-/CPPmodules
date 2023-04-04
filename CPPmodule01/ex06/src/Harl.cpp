@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 15:44:05 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/04 16:03:38 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/04 18:02:10 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void	Harl::complain(std::string level)
 			break ;
 		}
 	}
+	std::cout << B_BLK << BAL << RST << std::endl;
 	switch(index)
 	{
 		case 0:
