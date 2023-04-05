@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 17:17:10 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/03/28 15:43:34 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/05 14:44:13 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,14 @@
 
 #include "Weapon.hpp"
 
-/* One thing in C++ that I'd never come across before was using & at the end of
- * a variable. Coming from C I'm used to always reading the & character as
- * returning the address of something, but in C++ if you stick it on the END of
- * a variable it   */
+/* This human won't always have a weapon and doesn't take one via it's
+ * constructor like Human A, so whenever we give them one we'll use a pointer to
+ * keep it on the stack so we can change it to a different one easily. */
 class	HumanB
 {
 	private:
 		std::string	_name;
-		Weapon*		_weapon;
+		Weapon		*_weapon;
 
 	public:
 		HumanB(std::string _name);
