@@ -1,5 +1,5 @@
 # Exercise 01
-My First Class in Orthodox Cannonical Form
+Towards a more useful fixed-point number class
 
 ## Some stuff to read
 - [Orthodox canonical class form](https://www.francescmm.com/orthodox-canonical-class-form/)
