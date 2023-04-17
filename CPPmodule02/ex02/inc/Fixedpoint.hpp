@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 18:41:38 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/17 14:35:44 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/17 17:03:06 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
 class	Fixed
 {
 	private:
-		int					_fixedPointValue;
-		static const int	_fractionalBits = 8;
+		int					_FixedPointValue;
+		static const int	_bits = 8;
 	
 	public:
 		Fixed();
@@ -38,9 +38,34 @@ class	Fixed
 		Fixed 	&operator=(const Fixed &f2); //overload thingie
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
-		float	toFloat(void) const; //convert fixed point val to float
-		int		toInt(void) const; //convert fixed point to int
+		float	toFloat(void) const; //convert Fixed point val to float
+		int		toInt(void) const; //convert Fixed point to int
+	
+		//comparison operators
+		bool	operator>(Fixed const &f1) const;
+		bool	operator<(Fixed const &f1) const;
+		bool	operator>=(Fixed const &f1f) const;
+		bool	operator<=(Fixed const &f1) const;
+		bool	operator==(Fixed const &f1) const;
+		bool	operator!=(Fixed const &f1) const;
 
+		//arithmetic operators
+		Fixed	operator+(Fixed const &f1);
+		Fixed	operator-(Fixed const &f1);
+		Fixed	operator*(Fixed const &f1);
+		Fixed	operator/(Fixed const &f1);
+
+		//increment and decrement operators, pre and post
+		Fixed	operator++(void);
+		Fixed	operator++(int);
+		Fixed	operator--(void);
+		Fixed	operator--(int);
+
+		//more overloaded member functions
+		static	Fixed const &min(Fixed const &a, Fixed const &b);
+		static	Fixed const &max(Fixed const &a, Fixed const &b);
+		static	Fixed &min(Fixed &a, Fixed &b);
+		static	Fixed &max(Fixed &a, Fixed &b);
 };
 
 std::ostream	&operator<<(std::ostream &stream, Fixed const &f1);
