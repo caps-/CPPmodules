@@ -6,3 +6,5 @@
 100/100
 - [CPP Module 02](https://github.com/caps-/CPPmodules/tree/master/CPPmodule02) -
 WIP
+- [CPP Module 03](https://github.com/caps-/CPPmodules/tree/master/CPPmodule03) -
+WIP
