@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:04:39 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/17 18:11:26 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/17 22:25:55 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,31 @@
 class	ClapTrap
 {
 	private:
-		std::string	_Name;
-		int			_hitPoints;
-		int			_energyPoints;
-		int			_attackDamage;
-}
+		std::string	_name;
+		int			_hp; //hit points
+		int			_ep; //energy points
+		int			_ad; //attack damage
+
+	public:
+		ClapTrap();
+		ClapTrap(std::string Name, int _hp, int _ep, int _ad);
+		ClapTrap(ClapTrap const &ClapTrap01); //copy constructor
+		ClapTrap &operator=(ClapTrap const &ClapTrap02); //
+		~ClapTrap();
+		
+		void	attack(const std::string &target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
+
+		//getters
+		int	get_hp(void);
+		int	get_ep(void);
+		int	get_ad(void);
+
+		//setters
+		int	set_hp(void);
+		int	set_ep(void);
+		int	set_ad(void);
+};
+
+#endif
