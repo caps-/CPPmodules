@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 18:41:38 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/17 17:03:06 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/18 14:24:45 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ class	Fixed
 		//comparison operators
 		bool	operator>(Fixed const &f1) const;
 		bool	operator<(Fixed const &f1) const;
-		bool	operator>=(Fixed const &f1f) const;
+		bool	operator>=(Fixed const &f1) const;
 		bool	operator<=(Fixed const &f1) const;
 		bool	operator==(Fixed const &f1) const;
 		bool	operator!=(Fixed const &f1) const;
