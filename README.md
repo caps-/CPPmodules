@@ -11,4 +11,4 @@ WIP
 
 
 ## Stuff to read
--[https://www.cs.odu.edu/~zeil/cs330/latest/Public/big3/index.html](Copying and Moving Data)
+- [Copying and Moving Data](https://www.cs.odu.edu/~zeil/cs330/latest/Public/big3/index.html)
