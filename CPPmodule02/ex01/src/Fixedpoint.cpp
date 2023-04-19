@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 16:42:48 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/17 15:35:22 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/19 16:34:24 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,18 @@ Fixed::Fixed(const float fp)
 	this->_fixedPointValue = roundf(fp * (1 << Fixed::_fractionalBits));
 }
 
+/* Our function to convert fixed point values to floating point values.
+ *
+ * First thing worth pointing out here is that left shifting by 1 is the same
+ * as multiplying by two due to the fact it's a binary operation. Think of the
+ * number 5 in base 10 as an example. You shift the 5 one place to the left, in
+ * to the 10's 'column' if you will, and you get 50. That's also 5 x 10. So with
+ * binary that 10 column is a 2 column, so just as the previous example was 5 x
+ * 10, in binary it's n x 2. See what I mean?
+ * 
+ * Anyway I'm now realising there's WAY too much to type in here as a comment
+ * so just check the links in the README (if you got this from github) to
+ * understand how this all works. */
 float	Fixed::toFloat(void) const
 {
 	return ((float)this->_fixedPointValue / (float)(1 << Fixed::_fractionalBits));
@@ -74,6 +86,9 @@ int	Fixed::toInt(void) const
 	return (this->_fixedPointValue >> Fixed::_fractionalBits);
 }
 
+/* Overloaded stream insertion operator. Same kinda reason as the last exercise,
+ * it just lets us send our own user defined types and objects and shit to the
+ * output stream. */
 std::ostream &operator<<(std::ostream &stream, Fixed const &f1)
 {
 	stream << f1.toFloat();

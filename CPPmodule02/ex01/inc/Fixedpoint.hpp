@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 18:41:38 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/17 14:35:44 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/19 16:34:28 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ class	Fixed
 
 };
 
+/* Overloaded stream insertion operator */
 std::ostream	&operator<<(std::ostream &stream, Fixed const &f1);
 
 #endif

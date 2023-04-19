@@ -10,6 +10,7 @@ C++](https://www.geeksforgeeks.org/copy-constructor-in-cpp/)
 - [Overloading the assignment
   operator](https://www.learncpp.com/cpp-tutorial/overloading-the-assignment-operator/)
 - [C++ Overloading (Operator and Function)](https://www.tutorialspoint.com/cplusplus/cpp_overloading.htm)
+- [How does fixed to float conversion happen?](https://cs.stackexchange.com/questions/82494/how-does-conversion-from-fixed-point-to-floating-point-happen)
 
 ## Some stuff to watch
 - [Define a Copy Constructor to Create A Deep Copy Of An
