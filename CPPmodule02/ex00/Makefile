@@ -6,7 +6,7 @@
 #    By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/20 16:15:59 by pwhittin          #+#    #+#              #
-#    Updated: 2023/04/10 17:15:28 by pwhittin         ###   ########.fr        #
+#    Updated: 2023/04/19 16:50:01 by pwhittin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,14 +46,14 @@ all:
 	@echo "$(GRN_B)\n./$(NAME) is good to go!\n$(RESET)"
 	@echo "$(GRY)-----------------------------------------------------$(RESET)"
 
-clean:
+fclean:
 	@clear
 	@rm $(NAME)
 	@echo "$(YEL)-----------------------------------------------------$(RESET)"
-	@echo "$(GRN)All clean!$(RESET)"
+	@echo "$(GRN)All fclean!$(RESET)"
 	@echo "$(YEL)-----------------------------------------------------$(RESET)"
 
 re:
-	clean all
+	fclean all
 
-.PHONY: all, clean, re
+.PHONY: all, fclean, re
