@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:04:39 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/19 17:13:38 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/19 17:46:33 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CLAPTRAP_HPP
 
 #include <iostream>
+#include <string>
 
 /* COLOURS! */
 # define RST   "\033[0m" //reset colour
@@ -41,15 +42,13 @@ class	ClapTrap
 {
 	private:
 		std::string	_name;
-		int			_hp; //hit points
-		int			_ep; //energy points
-		int			_ad; //attack damage
+		int			_hitPoints; //hit points
+		int			_energyPoints; //energy points
+		int			_attackDamage; //attack damage
 
 	public:
 		ClapTrap();
-		ClapTrap(std::string Name, int _hp, int _ep, int _ad);
-		ClapTrap(ClapTrap const &newClapTrap); //copy constructor
-		ClapTrap &operator=(ClapTrap const &copiedClapTrap); //
+		ClapTrap(std::string name);
 		~ClapTrap();
 		
 		void	attack(const std::string &target);
@@ -57,14 +56,14 @@ class	ClapTrap
 		void	beRepaired(unsigned int amount);
 
 		//getters
-		int	get_hp(void);
-		int	get_ep(void);
-		int	get_ad(void);
+		int	get_hitPoints(void);
+		int	get_energyPoints(void);
+		int	get_attackDamage(void);
 
 		//setters
-		int	set_hp(void);
-		int	set_ep(void);
-		int	set_ad(void);
+		int	set_hitPoints(void);
+		int	set_energyPoints(void);
+		int	set_attackDamage(void);
 };
 
 #endif
