@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:04:39 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/17 22:25:55 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/19 17:13:38 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ class	ClapTrap
 	public:
 		ClapTrap();
 		ClapTrap(std::string Name, int _hp, int _ep, int _ad);
-		ClapTrap(ClapTrap const &ClapTrap01); //copy constructor
-		ClapTrap &operator=(ClapTrap const &ClapTrap02); //
+		ClapTrap(ClapTrap const &newClapTrap); //copy constructor
+		ClapTrap &operator=(ClapTrap const &copiedClapTrap); //
 		~ClapTrap();
 		
 		void	attack(const std::string &target);
