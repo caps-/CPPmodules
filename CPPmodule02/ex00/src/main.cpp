@@ -6,12 +6,11 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 18:39:24 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/10 16:43:33 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/19 14:54:09 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixedpoint.hpp"
-#include <iostream>
+#include "fixedpoint.hpp"
 
 int main(void)
 {

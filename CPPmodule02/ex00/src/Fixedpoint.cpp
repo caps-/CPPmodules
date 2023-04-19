@@ -6,11 +6,11 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 16:42:48 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/10 17:31:46 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/19 14:54:16 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixedpoint.hpp"
+#include "fixedpoint.hpp"
 
 /* Constructors and destructors */
 Fixed::Fixed() : _fixedPointValue(0)
