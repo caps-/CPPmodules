@@ -6,34 +6,71 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 19:02:57 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/19 17:46:29 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/20 18:25:16 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-#define MSG01	"Default constructor has been called."
-#define MSG02	"Constructor has been called."
-
-ClapTrap::ClapTrap() :	_name();
-						_hitPoints(10);
-						_energyPoints(10);
-						_attackDamage(3);
+/* Default constructor  */
+ClapTrap::ClapTrap(void) 
+	:	_name("blank");
+		_hitPoints(10);
+		_energyPoints(10);
+		_attackDamage(3);
 {
 
 	std::cout << GRN << MSG01 << RST << std::endl;
+	return ;
 }
 
-ClapTrap::ClapTrap() :	_name(name);
-						_hitPoints(10);
-						_energyPoints(10);
-						_attackDamage(3);
+/* Constructor */
+ClapTrap::ClapTrap(std::string name)
+	:	_name(name);
+	 	_hitPoints(10);
+	 	_energyPoints(10);
+	 	_attackDamage(3);
 {
 
-	std::cout << RED << MSG02 << RST << std::endl;
+	std::cout << WHT << name <<  CYN << MSG02 << RST << std::endl;
+	return ;
 }
 
-ClapTrap::~ClapTrap()
+/* Destructor */
+ClapTrap::~(ClapTrap)
 {
-	std::cout << MAG << "Destructor has been called." << RST << std::endl;
+	std::cout << WHT << this->name <<  RED << MSG03 << RST << std::endl;
+	return ;
+}
+
+/****** Attack, damage and repair stuff ******/
+
+//Attack
+void	attack(const std::string &target)
+{
+	if (this->_hitPoints == 0)
+	{
+		std::cout << WHT << this->_name << MAG << MSG04 << RST << std::endl;
+		return ;
+	}
+	if (this->_energyPoints == 0)
+	{
+		std::cout << WHT << this->_name << MAG << MSG05 << RST << std::endl;
+		return ;
+	}
+	this->_energyPoints--; //each attack costs -1 energy point
+	std::cout << WHT << this->_name << YEL << " attacks " << WHT << target
+		<< YEL << " for " << WHT << this->_attackDamage << RST << std::endl;
+	
+}
+
+//Damage
+void	takeDamage(unsigned int ammount)
+{
+	if (this->_hitPoints == 0)
+	{
+		std::cout << WHT << this->_name << MAG << MSG06 << RST << std::endl;
+		return ;
+	}
+
 }

@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:04:39 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/19 17:46:33 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/20 18:37:52 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,13 @@
 # define b_CYN "\033[1m\033[36m"
 # define b_WHT "\033[1m\033[37m"
 
+# define MSG01	"Default constructor has been called."
+# define MSG02	" has entered the fight!"
+# define MSG03	" has been destroyed!"
+# define MSG04	" can't attack, they're dead lol"
+# define MSG05	" can't attack, they're out of energy!"
+# define MSG06	" can't take any more damage!
+
 /* Big ass line  */
 # define BAL	"-----------------------------------------------------------"
 
@@ -47,8 +54,8 @@ class	ClapTrap
 		int			_attackDamage; //attack damage
 
 	public:
-		ClapTrap();
 		ClapTrap(std::string name);
+		ClapTrap(ClapTrap const &src); //copy constructor
 		~ClapTrap();
 		
 		void	attack(const std::string &target);
@@ -56,9 +63,10 @@ class	ClapTrap
 		void	beRepaired(unsigned int amount);
 
 		//getters
-		int	get_hitPoints(void);
-		int	get_energyPoints(void);
-		int	get_attackDamage(void);
+		int			get_hitPoints(void);
+		int			get_energyPoints(void);
+		int			get_attackDamage(void);
+		std::string	getName;
 
 		//setters
 		int	set_hitPoints(void);
