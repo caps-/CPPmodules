@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 12:32:57 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/25 18:28:47 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/25 20:35:56 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 class	ClapTrap
 {
-	private:
-		std::string	_name;
+	protected:
+		std::string				_name;
 		unsigned int			_HP;
 		unsigned int			_EP;
 		unsigned int			_AD;
@@ -27,7 +27,7 @@ class	ClapTrap
 	public:
 		ClapTrap();
 		ClapTrap(std::string name);
-		ClapTrap(ClapTrap &ClapTrap);
+		ClapTrap(ClapTrap const &src);
 		~ClapTrap();
 		
 		//overloading = operator

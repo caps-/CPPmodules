@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:45:57 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/25 17:58:31 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/25 20:46:46 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,30 @@ ClapTrap::ClapTrap(std::string name)
 		_EP(10),
 		_AD(3)
 {
-	std::cout << name << "'s constructor called" << std::endl;
+	std::cout << name << "'s constructor called." << std::endl;
 	std::cout << std::endl;
 };
 
+ClapTrap::ClapTrap(ClapTrap const &src)
+{
+	std::cout << YEL << "ClapTrap copy constructor called." << RST << std::endl;
+	*this = src;
+}
+
+ClapTrap &	ClapTrap::operator=(ClapTrap const & src) {
+	if (this != &src) {
+		this->_name = "Copied ClapTrap";
+		this->_HP = 10;
+		this->_EP = 10;
+		this->_AD = 3;
+	}
+	return (*this);
+}
+
 ClapTrap::~ClapTrap()
 {
-	std::cout << WHT << this->_name << "'s" << B_BLK << " destructor called" 
-		<< RST << std::endl;
+	std::cout << WHT << this->_name << "'s" << B_BLK 
+		<< " ClapTrap destructor called." << RST << std::endl;
 }
 
 //ATTACK

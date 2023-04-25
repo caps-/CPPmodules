@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:45:50 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/25 15:45:52 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/25 20:13:00 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@
 # define CYN   "\033[36m"
 # define WHT   "\033[37m"
 # define B_BLK "\033[1m\033[30m" //bold colours
-# define b_RED "\033[1m\033[31m"
-# define b_GRN "\033[1m\033[32m"
-# define b_YEL "\033[1m\033[33m"
-# define b_BLU "\033[1m\033[34m"
-# define b_MAG "\033[1m\033[35m"
-# define b_CYN "\033[1m\033[36m"
-# define b_WHT "\033[1m\033[37m"
+# define B_RED "\033[1m\033[31m"
+# define B_GRN "\033[1m\033[32m"
+# define B_YEL "\033[1m\033[33m"
+# define B_BLU "\033[1m\033[34m"
+# define B_MAG "\033[1m\033[35m"
+# define B_CYN "\033[1m\033[36m"
+# define B_WHT "\033[1m\033[37m"
 
 # define BAL	"-----------------------------------------------------------"
 
