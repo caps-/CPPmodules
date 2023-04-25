@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:04:39 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/20 18:37:52 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/25 12:43:37 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
 # define MSG03	" has been destroyed!"
 # define MSG04	" can't attack, they're dead lol"
 # define MSG05	" can't attack, they're out of energy!"
-# define MSG06	" can't take any more damage!
+# define MSG06	" can't take any more damage!"
 
 /* Big ass line  */
 # define BAL	"-----------------------------------------------------------"
