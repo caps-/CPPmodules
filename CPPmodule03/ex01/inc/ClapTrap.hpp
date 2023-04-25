@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 12:32:57 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/25 17:55:18 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/25 18:28:47 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class	ClapTrap
 		~ClapTrap();
 		
 		//overloading = operator
-		ClapTrap &	operator=(ClapTrap const & src);
+		ClapTrap &operator=(ClapTrap const &src);
 	
 		/*/getters
 		std::string		getName(void);
@@ -44,6 +44,9 @@ class	ClapTrap
 		void		attack(const std::string &target);
 		void		takeDamage(unsigned int amount);
 		void		beRepaired(unsigned int amount);
+
+		//ScavTrap gets their own special function here
+		void		guardGate();
 };
 
 #endif
