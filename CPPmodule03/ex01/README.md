@@ -4,4 +4,4 @@ Serena, my love!
 
 
 ## Some shit to read
--[Inheritance in C++](https://www.softwaretestinghelp.com/inheritance-in-cpp/)
+- [Inheritance in C++](https://www.softwaretestinghelp.com/inheritance-in-cpp/)
