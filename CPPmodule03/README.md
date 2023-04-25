@@ -2,6 +2,8 @@
 
 - [Exercise
   00](https://github.com/caps-/CPPmodules/tree/master/CPPmodule03/ex00): Aaaaand... OPEN!
+- [Exercise
+  01](https://github.com/caps-/CPPmodules/tree/master/CPPmodule03/ex01): Serena, my love!
 
 
 ## Some shit to read
