@@ -61,3 +61,6 @@ tmp/
 *.temp
 *.tmp
 _*
+
+#mac bullshit
+#.DS_Store
