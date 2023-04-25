@@ -1,76 +1,64 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 19:02:57 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/20 18:25:16 by pwhittin         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ClapTrap.hpp"
 
-/* Default constructor  */
-ClapTrap::ClapTrap(void) 
-	:	_name("blank");
-		_hitPoints(10);
-		_energyPoints(10);
-		_attackDamage(3);
+/* Constructors and Destructor */
+ClapTrap::ClapTrap()
 {
+	std::cout << "Default constructor called" << std::endl;
+};
 
-	std::cout << GRN << MSG01 << RST << std::endl;
-	return ;
-}
-
-/* Constructor */
 ClapTrap::ClapTrap(std::string name)
-	:	_name(name);
-	 	_hitPoints(10);
-	 	_energyPoints(10);
-	 	_attackDamage(3);
+	:	_name(name),
+		_HP(10),
+		_EP(10),
+		_AD(3)
 {
+	std::cout << name << "'s constructor called" << std::endl;
+};
 
-	std::cout << WHT << name <<  CYN << MSG02 << RST << std::endl;
-	return ;
+ClapTrap::~ClapTrap()
+{
+	std::cout << this->_name << "'s destructor called" << std::endl;
 }
 
-/* Destructor */
-ClapTrap::~(ClapTrap)
+//ATTACK
+void	ClapTrap::attack(const std::string &target)
 {
-	std::cout << WHT << this->name <<  RED << MSG03 << RST << std::endl;
-	return ;
+	if (this->_EP == 0)
+	{
+		std::cout << this->_name << "has 0 Energy Points and can't attack!"
+			<< std::endl;
+	}
+	else
+	{
+		this->_EP -= 1;
+		std::cout << this->_name << " attacks " << target << " with "
+			<< this->_AD << " points of attack damage!" << std::endl;
+		std::cout << this->_name << " has " << this->_EP << " EP left."
+			<< std::endl;
+		std::cout << std::endl;
+	}
 }
 
-/****** Attack, damage and repair stuff ******/
-
-//Attack
-void	attack(const std::string &target)
+void	ClapTrap::takeDamage(unsigned int amount)
 {
-	if (this->_hitPoints == 0)
-	{
-		std::cout << WHT << this->_name << MAG << MSG04 << RST << std::endl;
-		return ;
-	}
-	if (this->_energyPoints == 0)
-	{
-		std::cout << WHT << this->_name << MAG << MSG05 << RST << std::endl;
-		return ;
-	}
-	this->_energyPoints--; //each attack costs -1 energy point
-	std::cout << WHT << this->_name << YEL << " attacks " << WHT << target
-		<< YEL << " for " << WHT << this->_attackDamage << RST << std::endl;
-	
+	this->_HP -= amount;
+	std::cout << this->_name << " takes " << amount << " damage!" << std::endl;
+	std::cout << this->_name << " has " << this->_HP << " HP left." << std::endl;
+	std::cout << std::endl;
 }
 
-//Damage
-void	takeDamage(unsigned int ammount)
+void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->_hitPoints == 0)
+	if (this->_EP == 0)
 	{
-		std::cout << WHT << this->_name << MAG << MSG06 << RST << std::endl;
-		return ;
+		std::cout << this->_name << " has 0 Energy Points and can't repair!"
+			<< std::endl;
 	}
-
+	else
+	{
+		this->_EP -= 1;
+		this->_HP += amount;
+		std::cout << this->_name << "has repaired themselves with " << amount
+			<< " HP, giving them " << this->_HP << " total HP!" << std::endl;
+	}
 }
