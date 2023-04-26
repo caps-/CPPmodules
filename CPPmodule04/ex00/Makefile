@@ -6,12 +6,12 @@
 #    By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/20 16:15:59 by pwhittin          #+#    #+#              #
-#    Updated: 2023/04/25 13:07:21 by pwhittin         ###   ########.fr        #
+#    Updated: 2023/04/26 18:51:25 by pwhittin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #name
-NAME	 = claptrap
+NAME	 = animal
 
 #directories
 SRC_DIR	= src
@@ -23,7 +23,6 @@ CFLAGS	= -Wall -Werror -Wextra -std=c++98
 
 #source files
 SRC		= main.cpp \
-		  ClapTrap.cpp
 
 SRCS	= $(addprefix $(SRC_DIR)/,$(SRC))
 
