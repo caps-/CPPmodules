@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:45:57 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 13:17:24 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 13:30:25 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,9 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::ClapTrap(ClapTrap const &src)
 {
-	std::cout << YEL << "ClapTrap copy constructor called." << RST << std::endl;
 	*this = src;
+	std::cout << YEL << "ClapTrap copy constructor called for our old mate "
+		<< WHT << src._name << YEL << "." << RST << "\n" << std::endl;
 }
 
 ClapTrap &	ClapTrap::operator=(ClapTrap const & src) {
