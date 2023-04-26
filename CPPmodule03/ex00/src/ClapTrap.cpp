@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:45:57 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/25 17:58:31 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 12:04:25 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,7 @@ void	ClapTrap::attack(const std::string &target)
 			<< GRN << " with " << YEL << this->_AD << GRN
 			<< " points of attack damage!" << std::endl;
 		std::cout << WHT << this->_name << CYN << " has " << YEL << this->_EP
-			<< CYN " EP left." << std::endl;
-		std::cout << B_BLK << "______" << RST << std::endl;
+			<< CYN " energy points left." << std::endl;
 		std::cout << std::endl;
 	}
 }
@@ -65,6 +64,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		<< " damage!" << RST << std::endl;
 	std::cout << WHT << this->_name << MAG << " has " << YEL << this->_HP << MAG
 		<< " HP left." << std::endl;
+	std::cout << B_BLK << "______" << RST << std::endl;
 	std::cout << std::endl;
 }
 
@@ -88,9 +88,9 @@ void	ClapTrap::beRepaired(unsigned int amount)
 
 void	ClapTrap::setEP(unsigned int amount)
 {
-	this->_EP = amount;
-	std::cout << "** setting " << this->_name << "'s energy points to " 
-		<< amount << " **"
-		<< std::endl;
+	this->_EP = amount;	
+	std::cout << B_BLK << "______" << RST << std::endl;
+	std::cout << B_WHT << "** setting " << this->_name << "'s energy points to " 
+		<< amount << " **" << RST << std::endl;
 	std::cout << std::endl;
 }
