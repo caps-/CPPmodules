@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 18:54:33 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 16:33:37 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 18:07:38 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ void	ScavTrap::attack(std::string &target)
 }
 void	ScavTrap::guardGate()
 {
-	std::cout << std::endl;
 	std::cout << WHT << this->_name << BLU << " is now in Gate keeper mode!" 
 		<< RST << std::endl;
-		std::cout << B_BLK << "______" << RST << std::endl;
-		std::cout << std::endl;
+	std::cout << CYN << "\"Oh, you code? Name every lanauge.\"" << RST 
+		<< std::endl;
+	std::cout << B_BLK << "______\n" << RST << std::endl;
 }

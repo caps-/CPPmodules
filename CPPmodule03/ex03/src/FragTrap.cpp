@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 12:32:03 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 16:33:13 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 18:10:05 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ FragTrap::~FragTrap(void)
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << B_BLU << this->_name << B_WHT 
+	std::cout << B_WHT << "\n" << this->_name << B_BLU
 		<< " laughs and offers everyone a high five =D" << RST << "\n" 
 		<< std::endl;
 }
