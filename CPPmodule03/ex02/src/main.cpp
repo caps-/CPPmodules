@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:46:05 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 13:09:49 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 17:36:48 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ int	main(void)
 
 	ClapTrap	clap02(clap01);
 	clap02.attack(scavName);
+	clap01.setEP(0);
+	clap01.attack(fragName);
 
 	return (0);
 }

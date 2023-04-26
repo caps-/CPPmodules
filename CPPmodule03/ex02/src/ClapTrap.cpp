@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:45:57 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 13:30:25 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 17:39:40 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ ClapTrap::ClapTrap(std::string name)
 ClapTrap::ClapTrap(ClapTrap const &src)
 {
 	*this = src;
-	std::cout << YEL << "ClapTrap copy constructor called for our old mate "
+	std::cout << YEL << "\nClapTrap copy constructor called for our old mate "
 		<< WHT << src._name << YEL << "." << RST << "\n" << std::endl;
 }
 
@@ -112,8 +112,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 void	ClapTrap::setEP(unsigned int amount)
 {
 	this->_EP = amount;
-	std::cout << "** setting " << this->_name << "'s energy points to " 
-		<< amount << " **"
-		<< std::endl;
-	std::cout << std::endl;
+	std::cout << BLU << "** setting " << WHT << this->_name 
+		<< "'s " << BLU << "energy points to " << amount << BLU << " **\n"
+		<< RST << std::endl;
 }
