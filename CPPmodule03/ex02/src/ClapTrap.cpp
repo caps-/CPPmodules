@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:45:57 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/25 20:46:46 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 12:40:08 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ ClapTrap::ClapTrap(ClapTrap const &src)
 }
 
 ClapTrap &	ClapTrap::operator=(ClapTrap const & src) {
-	if (this != &src) {
+	if (this != &src) 
+	{
 		this->_name = "Copied ClapTrap";
 		this->_HP = 10;
 		this->_EP = 10;
