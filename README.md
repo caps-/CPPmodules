@@ -8,6 +8,8 @@
 80/100
 - [CPP Module 03](https://github.com/caps-/CPPmodules/tree/master/CPPmodule03) -
 WIP
+- [CPP Module 04](https://github.com/caps-/CPPmodules/tree/master/CPPmodule04) -
+WIP
 
 
 ## Stuff to read
