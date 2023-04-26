@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 12:32:03 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 13:11:23 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 13:18:27 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ FragTrap	&FragTrap::operator=(FragTrap const &src)
 
 FragTrap::~FragTrap(void)
 {
-	std::cout << WHT << this->_name << "'s" << B_BLK << " FragTrap destructor \
-		called." << RST << std::endl;
+	std::cout << WHT << this->_name << "'s" << B_BLK 
+		<< " FragTrap destructor called." << RST << std::endl;
 }
 
 void	FragTrap::highFivesGuys(void)
