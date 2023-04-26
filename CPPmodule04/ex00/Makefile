@@ -6,7 +6,7 @@
 #    By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/20 16:15:59 by pwhittin          #+#    #+#              #
-#    Updated: 2023/04/26 18:51:25 by pwhittin         ###   ########.fr        #
+#    Updated: 2023/04/26 20:09:51 by pwhittin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ CFLAGS	= -Wall -Werror -Wextra -std=c++98
 
 #source files
 SRC		= main.cpp \
+		  Cat.cpp
 
 SRCS	= $(addprefix $(SRC_DIR)/,$(SRC))
 
