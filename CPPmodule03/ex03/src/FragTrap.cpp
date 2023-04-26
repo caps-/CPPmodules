@@ -6,12 +6,19 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 12:32:03 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 13:18:27 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 15:05:05 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 #include "ColoursAndMacros.hpp"
+
+FragTrap::FragTrap(void) : ClapTrap()
+{
+	this->_HP = 100;
+	this->_EP = 100;
+	this->_AD = 30;
+}
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {

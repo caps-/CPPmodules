@@ -6,20 +6,20 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:46:05 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 13:09:49 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 14:51:38 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 #include "ColoursAndMacros.hpp"
 
 int	main(void)
 {
 	std::string	clapName;
 	std::string scavName;
-	std::string	fragName;
+	std::string	diamondName;
 
 
 	std::cout << B_BLK << BAL << RST << std::endl;
@@ -33,21 +33,16 @@ int	main(void)
 	ClapTrap	clap01(clapName);
 
 	std::cout << YEL << "Enter figher three's name: " << RST;
-	std::cin >> fragName;
-	FragTrap	frag01(fragName);
+	std::cin >> diamondName;
+	DiamondTrap	diamond01(diamondName);
 
 	std::cout << B_BLK << BAL << RST << std::endl;
 	std::cout << YEL << "[ FIGHT! ]" << RST << std::endl;
 	std::cout << std::endl;
 
-	frag01.highFivesGuys();
+	diamond01.whoAmI();
 	clap01.attack(scavName);
-	scav01.attack(clapName);
-	scav01.guardGate();
-	scav01.attack(clapName);
-
-	ClapTrap	clap02(clap01);
-	clap02.attack(scavName);
+	diamond01.attack(scavName);
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 12:32:57 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 13:17:54 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 14:29:07 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ class	ClapTrap
 	
 		//getters
 		std::string		getName(void) const;
+		unsigned int	getHP(void) const;
+		unsigned int	getEP(void) const;
+		unsigned int	getAD(void) const;
+
+		//setter
 		void			setEP(unsigned int amount);
 
 		//other member functions

@@ -6,14 +6,14 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:45:57 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 13:30:25 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 14:42:06 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ColoursAndMacros.hpp"
 
-/* Constructors and Destructor */
+//construct0rz
 ClapTrap::ClapTrap()
 {
 	std::cout << "Default constructor called" << std::endl;
@@ -47,18 +47,43 @@ ClapTrap &	ClapTrap::operator=(ClapTrap const & src) {
 	return (*this);
 }
 
+//Getters and setters
 std::string	ClapTrap::getName(void) const
 {
 	return (this->_name);
 }
 
+unsigned int	ClapTrap::getHP(void) const
+{
+	return (this->_HP);
+}
+
+unsigned int	ClapTrap::getEP(void) const
+{
+	return (this->_EP);
+}
+unsigned int	ClapTrap::getAD(void) const
+{
+	return (this->_AD);
+}
+
+void	ClapTrap::setEP(unsigned int amount)
+{
+	this->_EP = amount;
+	std::cout << "** setting " << this->_name << "'s energy points to " 
+		<< amount << " **"
+		<< std::endl;
+	std::cout << std::endl;
+}
+
+//destruct0rz
 ClapTrap::~ClapTrap()
 {
 	std::cout << WHT << this->_name << "'s" << B_BLK 
 		<< " ClapTrap destructor called." << RST << std::endl;
 }
 
-
+//functions
 void	ClapTrap::attack(const std::string &target)
 {
 	if (this->_EP == 0)
@@ -107,13 +132,4 @@ void	ClapTrap::beRepaired(unsigned int amount)
 			<<  CYN " total HP!" << RST << std::endl;
 		std::cout << std::endl;
 	}
-}
-
-void	ClapTrap::setEP(unsigned int amount)
-{
-	this->_EP = amount;
-	std::cout << "** setting " << this->_name << "'s energy points to " 
-		<< amount << " **"
-		<< std::endl;
-	std::cout << std::endl;
 }
