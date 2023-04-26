@@ -6,18 +6,20 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:46:05 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/25 20:46:16 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 13:09:49 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 #include "ColoursAndMacros.hpp"
 
 int	main(void)
 {
 	std::string	clapName;
 	std::string scavName;
+	std::string	fragName;
 
 
 	std::cout << B_BLK << BAL << RST << std::endl;
@@ -30,10 +32,15 @@ int	main(void)
 	std::cin >> clapName;
 	ClapTrap	clap01(clapName);
 
+	std::cout << YEL << "Enter figher three's name: " << RST;
+	std::cin >> fragName;
+	FragTrap	frag01(fragName);
+
 	std::cout << B_BLK << BAL << RST << std::endl;
 	std::cout << YEL << "[ FIGHT! ]" << RST << std::endl;
 	std::cout << std::endl;
 
+	frag01.highFivesGuys();
 	clap01.attack(scavName);
 	scav01.attack(clapName);
 	scav01.guardGate();

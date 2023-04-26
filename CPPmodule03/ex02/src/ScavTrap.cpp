@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 18:54:33 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/25 20:31:28 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 13:12:24 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	ScavTrap::attack(std::string &target)
 void	ScavTrap::guardGate()
 {
 	std::cout << std::endl;
-	std::cout << WHT << this->_name << BLU << " now in Gate keeper mode!" 
+	std::cout << WHT << this->_name << BLU << " is now in Gate keeper mode!" 
 		<< RST << std::endl;
 		std::cout << B_BLK << "______" << RST << std::endl;
 		std::cout << std::endl;
