@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 12:32:57 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/25 20:35:56 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 13:20:34 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,8 @@ class	ClapTrap
 		//overloading = operator
 		ClapTrap &operator=(ClapTrap const &src);
 	
-		/*/getters
-		std::string		getName(void);
-		unsigned int	getHP(void);
-		unsigned int	getEP(void);
-		unsigned int	getAD(void);*/
+		//getters
+		std::string		getName(void) const;
 		void			setEP(unsigned int amount);
 
 		//other member functions
