@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:46:05 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 14:51:38 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 17:30:17 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(void)
 	std::cin >> clapName;
 	ClapTrap	clap01(clapName);
 
-	std::cout << YEL << "Enter figher three's name: " << RST;
+	std::cout << YEL << "\nEnter figher three's name: " << RST;
 	std::cin >> diamondName;
 	DiamondTrap	diamond01(diamondName);
 
@@ -42,6 +42,13 @@ int	main(void)
 
 	diamond01.whoAmI();
 	clap01.attack(scavName);
+	diamond01.attack(scavName);
+	std::cout << WHT << scavName << BLU << " using " << WHT << clapName << "'s "
+		<< BLU << "attack damage here .." << RST << std::endl;
+	scav01.takeDamage(clap01.getAD());
+	std::cout << WHT << scavName << BLU << " taking " << WHT << diamondName 
+		<< "'s " << BLU << "attack damage here .." << RST << std::endl;
+	scav01.takeDamage(diamond01.getAD());
 	diamond01.attack(scavName);
 
 	return (0);

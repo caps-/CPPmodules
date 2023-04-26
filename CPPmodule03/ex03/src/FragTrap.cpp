@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 12:32:03 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 15:05:05 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 16:33:13 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	this->_EP = 100;
 	this->_AD = 30;
 
-	std::cout << WHT << "A third challenger appears! " << BLU << name << WHT
-		<< " has joined the fight!" << RST << std::endl;
+	std::cout << WHT << "A constructor for a FragTrap named " << RED << name 
+		<< WHT << " been called." << RST << std::endl;
 }
 
 FragTrap::FragTrap(FragTrap const &src) : ClapTrap()

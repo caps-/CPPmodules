@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 13:52:11 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 15:28:08 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 16:58:06 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ DiamondTrap::DiamondTrap(std::string name)
 	this->_EP = ScavTrap::_EP;
 	this->_AD = FragTrap::_AD;
 
-	std::cout << RED << "A DiamondTrap named " << YEL << name 
-		<< "was constructed." << RST << std::endl;
+	std::cout << BLU << "A constructor for a DiamondTrap called " << RED << name
+		<< BLU << " has been called." << RST << std::endl;
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap const &src) :
@@ -62,11 +62,13 @@ DiamondTrap &DiamondTrap::operator=(DiamondTrap const &src)
 //destruct0r
 DiamondTrap::~DiamondTrap(void)
 {
-	std::cout << "DiamondTrap destructor called." << std::endl;
+	std::cout << WHT << this->_name << "'s " << B_BLK
+		<< "DiamondTrap destructor called." << RST << std::endl;
 }
 
 //functions
 void	DiamondTrap::whoAmI(void)
 {
-	std::cout << "whoAmI() test" << std::endl;
+	std::cout << BLU << "It's me, " << RED << this->_name << BLU ", the son of "
+		<< WHT << ClapTrap::_name << BLU << "!\n" << std::endl;
 }
