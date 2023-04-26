@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:45:57 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 17:39:40 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 17:45:24 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ ClapTrap::ClapTrap(std::string name)
 		_EP(10),
 		_AD(3)
 {
-	std::cout << name << "'s constructor called." << std::endl;
-	std::cout << std::endl;
+	std::cout << WHT << "A constructor for a ClapTrap named " << RED << name
+		<< WHT << " has been called." << std::endl;
 };
 
 ClapTrap::ClapTrap(ClapTrap const &src)

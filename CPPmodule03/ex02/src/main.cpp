@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:46:05 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 17:36:48 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 17:46:20 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(void)
 	std::cin >> clapName;
 	ClapTrap	clap01(clapName);
 
-	std::cout << YEL << "Enter figher three's name: " << RST;
+	std::cout << YEL << "\nEnter figher three's name: " << RST;
 	std::cin >> fragName;
 	FragTrap	frag01(fragName);
 

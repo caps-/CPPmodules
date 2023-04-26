@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 18:54:33 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 13:12:24 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/26 17:48:51 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ ScavTrap::ScavTrap() : ClapTrap()
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << "A constructor for a ScavTrap called " << RED <<  name << RST 
-		<< " was also called!" << std::endl;
+	std::cout << "A constructor for a ScavTrap named " << RED <<  name << RST 
+		<< " has also been called!" << std::endl;
 	std::cout << std::endl;
 	this->_HP = 100;
 	this->_EP = 50;
