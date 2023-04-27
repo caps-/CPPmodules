@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 19:14:17 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 20:10:35 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:36:37 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,11 @@ int	test42(void)
 int	main(void)
 {
 //	test42();
-	const animal *cat = new Cat();
+	const Animal *meta = new Cat();
 
-	cat->makeSound();
+	meta->makeSound();
+
+	delete meta;
 
 	return (0);
 }

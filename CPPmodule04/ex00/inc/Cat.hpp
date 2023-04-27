@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 19:10:30 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 19:13:05 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:30:12 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,5 @@ class	Cat : public Animal
 
 		void	makeSound(void) const;
 };
+
+#endif

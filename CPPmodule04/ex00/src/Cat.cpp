@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 20:13:35 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 20:13:38 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:32:07 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@
      return ;
  }
 
- Cat &operator=(Cat const &src)
+ Cat &Cat::operator=(Cat const &src)
  {
      std::cout << CYN << "Cat assignment operator is now overloaded." << RST
          << std::endl;
@@ -48,6 +48,6 @@
 
  void    Cat::makeSound(void) const
  {
-     std::cout << WHT << "<" << this->_type << "> " << YELLOW
-         << "meooOo0Oow" << RST << std::endl;
+     std::cout << WHT << "<" << this->_type << "> " << YEL << "meooOo0Oow" 
+		 << RST << std::endl;
  }

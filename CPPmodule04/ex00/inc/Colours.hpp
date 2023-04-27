@@ -6,11 +6,11 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 18:55:12 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 18:55:18 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:29:56 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COLOURS.HPP
+#ifndef COLOURS_HPP
 # define COLOURS_HPP
 
 //regular

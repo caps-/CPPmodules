@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 18:55:54 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/26 19:11:06 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:29:33 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class	Animal
 {
 	protected:
-		st::string	_type;
+		std::string	_type;
 
 	public:
 		Animal(void);
