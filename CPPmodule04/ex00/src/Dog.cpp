@@ -1,56 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/26 20:13:35 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/27 14:30:10 by pwhittin         ###   ########.fr       */
+/*   Created: 2023/04/27 13:21:22 by pwhittin          #+#    #+#             */
+/*   Updated: 2023/04/27 14:41:14 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "Cat.hpp"
+ #include "Dog.hpp"
  #include "Colours.hpp"
  #include <iostream>
  #include <string>
 
  /* Trying to get in to the habit of using return ; to immediately exit the
   * funciton. Just seems like good practice. */
- Cat::Cat(void) : Animal()
+ Dog::Dog(void) : Animal()
  {
-     std::cout << CYN << "Cat default constructor has been called." << RST
+     std::cout << CYN << "Dog default constructor has been called." << RST
 		 << std::endl;
-     this->_type = "Cat";
+     this->_type = "Dog";
      return ;
  }
 
- Cat::Cat(Cat const &src) : Animal()
+ Dog::Dog(Dog const &src) : Animal()
  {
-     std::cout << CYN << "Cat copy constructor has been  called." << RST
+     std::cout << CYN << "Dog copy constructor has been called." << RST
 		 << std::endl;
      *this = src;
      return ;
  }
 
- Cat::~Cat(void)
+ Dog::~Dog(void)
  {
-     std::cout << B_BLK << "Cat destructor has been called." << RST
+     std::cout << B_BLK << "Dog destructor has been called." << RST
 		 << std::endl;
      return ;
  }
 
- Cat &Cat::operator=(Cat const &src)
+ Dog &Dog::operator=(Dog const &src)
  {
-     std::cout << CYN << "Cat assignment operator is now overloaded." << RST
+     std::cout << CYN << "Dog assignment operator is now overloaded." << RST
          << std::endl;
      if (this != &src)
          this->_type = src._type;
      return (*this);
  }
 
- void    Cat::makeSound(void) const
+ void    Dog::makeSound(void) const
  {
-     std::cout << YEL << "<" << this->_type << "> " << WHT << "meooOo0Oow" 
+     std::cout << YEL << "<" << this->_type << "> " << WHT << "arf! w00f!" 
 		 << RST << std::endl;
  }

@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 12:37:21 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/27 13:19:14 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:07:48 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include "Colours.hpp"
 #include <iostream>
 
-Animal::Animal(void)
+Animal::Animal(void) : _type("Unknown")
 {
-	std::cout << CYN << "Default Animal constructor has been called." << RST
+	std::cout << BLU << "Default Animal constructor has been called." << RST
 		<< std::endl;
 	return ;
 }
@@ -45,8 +45,8 @@ Animal::Animal(std::string const &type) : _type(type)
 
 Animal &Animal::operator=(Animal const &src)
 {
-	std::cout <<  "Animal assignment operator has been overloaded." << RST
-		<< std::endl;
+	std::cout << CYN <<  "Animal assignment operator has been overloaded."
+		<< RST << std::endl;
 	if (this != &src)
 		this->_type = src._type;
 	return (*this);
@@ -60,6 +60,7 @@ std::string const	&Animal::getType(void) const
 
 void	Animal::makeSound(void) const
 {
-	std::cout << BLU << this->_type << "..........." << RST << std::endl;
+	std::cout << GRN << "<" << this->_type << "> " << WHT << "*random noises*"
+		<< RST << std::endl;
 	return ;
 }

@@ -6,7 +6,7 @@
 #    By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/20 16:15:59 by pwhittin          #+#    #+#              #
-#    Updated: 2023/04/27 12:37:10 by pwhittin         ###   ########.fr        #
+#    Updated: 2023/04/27 14:10:27 by pwhittin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,10 @@ CFLAGS	= -Wall -Werror -Wextra -std=c++98
 #source files
 SRC		= main.cpp \
 		  Animal.cpp \
-		  Cat.cpp
+		  Cat.cpp \
+		  Dog.cpp \
+		  WrongAnimal.cpp \
+		  WrongCat.cpp
 
 SRCS	= $(addprefix $(SRC_DIR)/,$(SRC))
 
