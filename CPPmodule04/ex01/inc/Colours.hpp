@@ -6,7 +6,7 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:50:24 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/28 23:50:28 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/29 01:43:41 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,16 @@
 # define BMAG	"\e[95m"
 # define BCYN	"\e[96m"
 # define BWHT	"\e[97m"
+
+//background
+# define BGBLK	"\e[40m"
+# define BGRED	"\e[41m"
+# define BGGRN  "\e[42m"
+# define BGYEL	"\e[43m"
+# define BGBLU	"\e[44m"
+# define BGMAG	"\e[45m"
+# define BGCYN	"\e[46m"
+# define BGWHT	"\e[47m"
 
 //reset
 # define RST	"\e[0m"

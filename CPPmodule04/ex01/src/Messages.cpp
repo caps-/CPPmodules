@@ -6,7 +6,7 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:45:55 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 00:36:22 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/29 01:49:08 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@
 
 void	announceTest(std::string const &str)
 {
-	std::cout << BYEL << "\n[" << YEL << str << BYEL << "]\n" << std::endl;
+	std::cout << BBLK << BAL << RST << std::endl;
+	std::cout << BYEL << "[" << YEL << str << BYEL << "]" << RST << std::endl;
 }
 
 void	announce(std::string const &str)
 {
-	std::cout << BMAG << "\n[" << MAG << str << BMAG << "]\n" << std::endl;
+	std::cout << BMAG << "\n[" << MAG << str << BMAG << "]" << std::endl;
+	std::cout << BBLK << "-" << RST << std::endl;
 }
 
 void	bigAssLine(void)
