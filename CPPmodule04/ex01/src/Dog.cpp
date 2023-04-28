@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 13:21:22 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 02:46:00 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/29 04:31:47 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,38 +20,39 @@
  * funciton. Just seems like good practice. */
 Dog::Dog(void) : Animal()
 {
-    std::cout << CYN << "Dog default constructor has been called." << RST
-	 << std::endl;
-    this->_type = "Dog";
-    return ;
+	announceConstructor("Dog");
+	this->_type = "Dog";
+
+	return ;
 }
 
 Dog::Dog(Dog const &src) : Animal()
 {
-    std::cout << CYN << "Dog copy constructor has been called." << RST
-	 << std::endl;
+	announceCopy("Dog");
     *this = src;
-    return ;
+
+	return ;
 }
 
 Dog::~Dog(void)
 {
-    std::cout << BBLK << "Dog destructor has been called." << RST
-	 << std::endl;
-    return ;
+	announceDestructor("Dog");
+
+	return ;
 }
 
 Dog &Dog::operator=(Dog const &src)
 {
-    std::cout << CYN << "Dog assignment operator is now overloaded." << RST
-        << std::endl;
+	announceDeep("Dog");
     if (this != &src)
         this->_type = src._type;
-    return (*this);
+    
+	return (*this);
 }
 
 void    Dog::makeSound(void) const
 {
 	animalSound("dog");
+	
 	return ;
 }

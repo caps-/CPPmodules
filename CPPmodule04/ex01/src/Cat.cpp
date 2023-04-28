@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 20:13:35 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 03:39:29 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/29 04:33:55 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,9 @@
 #include <iostream>
 #include <string>
 /* Trying to get in to the habit of using return ; to immediately exit the
- * funciton. Just seems like good practice. */
-/*Cat::Cat(void) : Animal()
-{
-	std::cout << CYN << "Cat default constructor has been called." << RST
-	<< std::endl;
-    this->_type = "Cat";
-    return ;
-}*/
+* funciton. Just seems like good practice. */
 
-Cat::Cat(void) : Animal()
+Cat::Cat(void) : Animal(), _brain(new Brain()) 
 {
 	announceConstructor("Cat");
 	this->_type = "Cat";
@@ -33,35 +26,29 @@ Cat::Cat(void) : Animal()
 	return ;
 }
 
-Cat::Cat(Cat const &src) : Animal()
+Cat::Cat(Cat const &src) : Animal(), _brain();
 {
-    std::cout << CYN << "Cat copy constructor has been  called." << RST
-	 << std::endl;
+	announceCopy("Cat");
     *this = src;
-    return ;
+    
+	return ;
 }
 
 Cat::~Cat(void)
 {
-    std::cout << BBLK << "Cat destructor has been called." << RST
-	 << std::endl;
+	announceDestructor("Cat");
+
     return ;
 }
 
 Cat &Cat::operator=(Cat const &src)
 {
-    std::cout << CYN << "Cat assignment operator is now overloaded." << RST
-        << std::endl;
+	announceDeep("Cat");
     if (this != &src)
         this->_type = src._type;
     return (*this);
 }
-/*void    Cat::makeSound(void) const
-{
-    std::cout << YEL << "<" << this->_type << "> " << WHT << "meooOo0Oow" 
-	 << RST << std::endl;
- return ;
-}*/
+
 void	Cat::makeSound(void) const
 {
 	animalSound("cat");

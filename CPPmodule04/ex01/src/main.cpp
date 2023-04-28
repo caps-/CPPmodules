@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 19:14:17 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 03:16:57 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/29 03:55:15 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,28 +19,30 @@
 
 void	animalTesting(void)
 {
-	//crray testing
 	announceTest("ARRAY TESTS");
 	announce("Constructing Animal Array");
+	//array testing
 	Animal *animal[6];
     for (int i = 0; i < 6; i++)
     {
         if (i % 2 == 0)
-            animal[i] = new Dog();
-        else
             animal[i] = new Cat();
+        else
+            animal[i] = new Dog();
     }
-
+	
 	announce("Noises!");
 	for (int i = 0; i < 6; i++)
 		animal[i]->makeSound();
 
-	//copy + brain testing
-	announceTest("Copy + Brain testing");
+	announceTest("COPY & BRAIN TESTING");
 	announce("Copy testing");
+	//copy + brain testing
+	Cat	cat;
+	Cat	copyCat = cat;
 
-	//delete the animals	
 	announce("Deleting");
+	//delete the animals	
 	for (int i = 0; i < 6; i++)
 		delete animal[i];
 	bigAssLine();

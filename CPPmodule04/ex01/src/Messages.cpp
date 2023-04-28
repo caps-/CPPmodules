@@ -6,7 +6,7 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:45:55 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 03:39:20 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/29 04:30:48 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,47 +30,78 @@ void	announce(std::string const &str)
 
 void	announceConstructor(const std::string &type)
 {
-/*	std::string cat = "cat";
-	std::string unknown = "unknown";
-	int res = type.compare(cat);
-	if (res == 0)
+	if (type == "Cat" || type == "Dog")
 	{
-		std::cout << CYN << "Cat default constructor has been called." << RST 
-			<< std::endl;
+		std::cout << CYN << type << " defualt constructor has been called." 
+			<< RST << std::endl;
 	}
 	else
 	{
-		std::cout << CYN << "Dog default constructor has been called." << RST 
-			<< std::endl;
-	}
-	res = type.compare(unknown);
-	if (res == 0)
-		std::cout << BLU << "Default Animal constructor has been called." << RST
-			<< std::endl;
-	return ;*/
-
-	if (type == "Cat" || type == "Dog")
-	{
-		std::cout << CYN << type << " defualt constructor has been called." << RST
-			<< std::endl;
+		std::cout << BLU << "Animal default constructor has been called." 
+			<< RST << std::endl;
 	}
 	return ;
 }
 
-void	animalSound(const std::string &type)
+void	announceCopy(const std::string &type)
 {
-	std::string cat = "cat";
-	int	res = type.compare(cat);
-
-	if (res == 0)
+	if (type == "Cat" || type == "Dog")
 	{
-		std::cout << YEL << "<" << BYEL << "Dog" << YEL "> " << RST << "arf! w00f!"
-			<< std::endl;
+		std::cout << BMAG << type << " copy constructor has been called." 
+			<< RST << std::endl;
 	}
 	else
 	{
-		std::cout << YEL << "<" << BYEL << "Cat" << YEL "> " << RST << "meeooOo0w!"
-			<< std::endl;
+		std::cout << BMAG << "Unknown Animal constructor has been called." 
+			<< RST << std::endl;
+	}
+	return ;
+
+}
+
+void	announceDeep(const std::string &type)
+{
+	if (type == "Cat" || type == "Dog")
+	{
+		std::cout << MAG << type << " has been deep copied. DEEEEEEEEP." 
+			<< RST << std::endl;
+	}
+	else
+	{
+		std::cout << MAG << "Unknown Animal has been deep copied. DEEEEEEEP." 
+			<< RST << std::endl;
+	}
+	return ;
+
+}
+
+void	announceDestructor(const std::string &type)
+{
+	if (type == "Cat" || type == "Dog")
+	{
+		std::cout << BBLK << type << " destructor has been called." 
+			<< RST << std::endl;
+	}
+	else
+	{
+		std::cout << BBLK << "Unknown Animal destructor has been called.." 
+			<< RST << std::endl;
+	}
+	return ;
+
+}
+
+void	animalSound(const std::string &type)
+{
+	if (type == "Cat")
+	{
+		std::cout << YEL "<" << BYEL << type << YEL "> " << RST 
+			<< "meeooOo0w!" << std::endl;
+	}
+	else
+	{
+		std::cout << YEL "<" << BYEL << type << YEL "> " << RST
+			<< "arf! w00f!" << std::endl;
 	}
 }
 
