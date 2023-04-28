@@ -6,7 +6,7 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:45:55 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 02:42:58 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/29 02:48:55 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 void	announceTest(std::string const &str)
 {
 	std::cout << BBLK << BAL << RST << std::endl;
-	std::cout << BYEL << "[" << YEL << str << BYEL << "]" << RST << std::endl;
+	std::cout << BGRN << "[" << GRN << str << BGRN << "]" << RST << std::endl;
 }
 
 void	announce(std::string const &str)
