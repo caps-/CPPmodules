@@ -64,3 +64,6 @@ _*
 
 #mac bullshit
 .DS_Store
+
+#executables
+./animal
