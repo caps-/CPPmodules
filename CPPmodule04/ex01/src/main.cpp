@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 19:14:17 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 01:40:32 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/29 02:59:16 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 #include "Colours.hpp"
 #include "Messages.hpp"
 
-void	testArrays(void)
+void	animalTesting(void)
 {
 	//message
 	announceTest("ARRAY TESTS");
 	
 	announce("Constructing Animal Array");
-	Animal *animal[10];
-    for (int i = 0; i < 10; i++)
+	Animal *animal[6];
+    for (int i = 0; i < 6; i++)
     {
         if (i % 2 == 0)
             animal[i] = new Dog();
@@ -33,18 +33,18 @@ void	testArrays(void)
     }
 
 	announce("Noises!");
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 6; i++)
 		animal[i]->makeSound();
 
 	announce("Deleting");
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 6; i++)
 		delete animal[i];
 	bigAssLine();
 }
 
 int	main(void)
 {
-	testArrays();
+	animalTesting();
 
 	return (0);
 }
