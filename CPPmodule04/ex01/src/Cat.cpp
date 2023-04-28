@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 20:13:35 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 02:44:09 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/29 03:39:29 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,21 @@
 #include <string>
 /* Trying to get in to the habit of using return ; to immediately exit the
  * funciton. Just seems like good practice. */
-Cat::Cat(void) : Animal()
+/*Cat::Cat(void) : Animal()
 {
 	std::cout << CYN << "Cat default constructor has been called." << RST
 	<< std::endl;
     this->_type = "Cat";
     return ;
- }
+}*/
+
+Cat::Cat(void) : Animal()
+{
+	announceConstructor("Cat");
+	this->_type = "Cat";
+
+	return ;
+}
 
 Cat::Cat(Cat const &src) : Animal()
 {

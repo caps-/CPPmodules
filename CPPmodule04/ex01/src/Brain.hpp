@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Messages.hpp                                       :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 23:22:32 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 03:18:13 by pwhittin         ###   ########.fr       */
+/*   Created: 2023/04/29 03:10:54 by pwhittin          #+#    #+#             */
+/*   Updated: 2023/04/29 03:16:09 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MESSAGES_HPP
-# define MESSAGES_HPP
+#include <string>
 
-# include "Animal.hpp"
+class	Brain
+{
+	private:
+		std::string _ideas[100];
 
-void	announce(std::string const &str);
-void	announceTest(std::string const &str);
-void	announceConstructor(std::string const &str);
-void	animalSound(const std::string &type);
-void	bigAssLine(void);
+	public:
+		Brain(void);
+		Brain(Brain const &src);
+		Bran &opertor(Brain const &src);
+		virtual ~Brain(void);
+
+		//getters and setters
+		void	getIdea(int	i) const;
+		void	setIdea(int i, std::string idea);
+};
 
 #endif

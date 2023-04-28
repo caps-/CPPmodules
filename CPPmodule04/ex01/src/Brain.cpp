@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Messages.hpp                                       :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 23:22:32 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 03:18:13 by pwhittin         ###   ########.fr       */
+/*   Created: 2023/04/29 03:10:04 by pwhittin          #+#    #+#             */
+/*   Updated: 2023/04/29 03:19:01 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MESSAGES_HPP
-# define MESSAGES_HPP
+#include "Brain.hpp"
+#include "Colours.hpp"
+#include <iostream>
 
-# include "Animal.hpp"
-
-void	announce(std::string const &str);
-void	announceTest(std::string const &str);
-void	announceConstructor(std::string const &str);
-void	animalSound(const std::string &type);
-void	bigAssLine(void);
-
-#endif
+Brain::Brain(void)
+{
+	
+}

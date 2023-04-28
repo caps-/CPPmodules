@@ -6,18 +6,18 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 12:37:21 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 00:14:00 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/04/29 03:34:53 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Colours.hpp"
+#include "Messages.hpp"
 #include <iostream>
 
 Animal::Animal(void) : _type("Unknown")
 {
-	std::cout << BLU << "Default Animal constructor has been called." << RST
-		<< std::endl;
+	announceConstructor("unknown");
 	return ;
 }
 
