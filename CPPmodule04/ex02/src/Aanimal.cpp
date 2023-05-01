@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 12:37:21 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 15:22:39 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 15:33:40 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,6 @@ Aanimal::~Aanimal(void)
 	return ;
 }
 
-Aanimal::Aanimal(std::string const &type) : _type(type)
-{
-	std::cout << CYN << "Aanimal type copy constructor has been called." << RST
-		<< std::endl;
-	return ;
-}
-
 Aanimal &Aanimal::operator=(Aanimal const &src)
 {
 	std::cout << CYN <<  "Aanimal assignment operator has been overloaded."
@@ -50,12 +43,6 @@ Aanimal &Aanimal::operator=(Aanimal const &src)
 	if (this != &src)
 		this->_type = src._type;
 	return (*this);
-}
-
-
-std::string const	&Aanimal::getType(void) const
-{
-	return (this->_type);
 }
 
 void	Aanimal::makeSound(void) const
