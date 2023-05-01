@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 18:55:54 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 15:48:57 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 15:55:33 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@
  * virtual function/method has to be used instead. 
  *
  * In other words, unless an object is created using or deriving from the Aanimal
- * class it won't be able to use the makeSound() function. */
+ * class it won't be able to use the makeSound() function.
+ *
+ * This ALSO means that this Aanimal class is now an ABSTRACT class. Cool! */
 class	Aanimal
 {
 	protected:
