@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 19:14:17 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 13:26:09 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 14:33:54 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,15 @@ void	animalTesting(void)
         else
             animal[i] = new Dog();
     }
+	std::cout << "\nPress any key to continue .." << std::endl;
+	system("read");
 	
 	announce("Noises!");
 	for (int i = 0; i < 6; i++)
 		animal[i]->makeSound();
 
+	std::cout << "\nPress any key to continue .." << std::endl;
+	system("read");
 	announceTest("COPY & BRAIN TESTING");
 	announce("Copying Cat");
 	//copy + brain testing
@@ -56,6 +60,8 @@ void	animalTesting(void)
 	announceIdea("copyCat01", copyCat01->getBrain()->getIdea(1));
 	announceIdea("copyCat01", copyCat01->getBrain()->getIdea(2));
 	announceIdea("copyCat01", copyCat01->getBrain()->getIdea(3));
+	std::cout << "\nPress any key to continue .." << std::endl;
+	system("read");
 
 	announce("OK, let's give the original cat some new ideas");
 	cat->getBrain()->setIdea(0, "hmm what do I wanna do now?");
@@ -77,6 +83,8 @@ void	animalTesting(void)
 	announceIdea("copyCat01", copyCat01->getBrain()->getIdea(1));
 	announceIdea("copyCat01", copyCat01->getBrain()->getIdea(2));
 	announceIdea("copyCat01", copyCat01->getBrain()->getIdea(3));
+	std::cout << "\nPress any key to continue .." << std::endl;
+	system("read");
 
 	announce("Deleting all the animals");
 	//delete the animals	
