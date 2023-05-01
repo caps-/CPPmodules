@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 16:55:10 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 17:37:51 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 18:49:59 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,17 @@ class Character : public ICharacter
 	public:
 		Character(void);
 		Character(Character const &src);
+		Character(std::string const &name);
 		void ~Character(void);
 
 		Character	&operator=(Character const &src);
 
 		std::string	const	&getName(void) const;
 		void				setName(std::string const &name);
-		void				equip(AMateria *m);
-		void				unequip(int idx);
-		void				use(int idx, ICharater &target);
-		void				showInventory(void) const;
+//		void				equip(AMateria *m);
+//		void				unequip(int idx);
+//		void				use(int idx, ICharater &target);
+//		void				showInventory(void) const;
 };
 
 #endif
