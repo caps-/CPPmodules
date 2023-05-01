@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 17:42:31 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 17:51:06 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 18:00:53 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 class MateriaSource : public IMateriaSource
 {
 	private:
-		AMateria	*templates[4]
+		AMateria	*_templates[4]
+
 	public:
 		MateriaSource(void);
 		MateriaSource(MateriaSource const &src);
