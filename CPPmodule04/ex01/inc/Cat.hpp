@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 19:10:30 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 03:09:49 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 12:06:27 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ class	Cat : public Animal
 
 		Brain	*getBrain(void) const;
 		void	makeSound(void) const;
+
+	private:
+		Brain	*_brain;
 };
 
 #endif

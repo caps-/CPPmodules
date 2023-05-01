@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 19:14:17 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 03:55:15 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 13:07:36 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,23 @@ void	animalTesting(void)
 		animal[i]->makeSound();
 
 	announceTest("COPY & BRAIN TESTING");
-	announce("Copy testing");
+	announce("Copying Cat");
 	//copy + brain testing
-	Cat	cat;
-	Cat	copyCat = cat;
+	Cat *copyCat = new Cat();
+
+	announce("Giving them ideas");
+	//ideas & brain shit
+	copyCat->getBrain()->setIdea(0, "I should jump on to this bench");
+	copyCat->getBrain()->setIdea(1, "that glass is so close to the edge");
+	copyCat->getBrain()->setIdea(2, "maybe if I just give it a little nudge ..");
+	announceIdea("Copy Cat", copyCat->getBrain()->getIdea(0));
+	announceIdea("Copy Cat", copyCat->getBrain()->getIdea(1));
+	announceIdea("Copy Cat", copyCat->getBrain()->getIdea(2));
+	announce("Copying copyCat");
+/*	Cat *copyCat02 = new Cat(*copyCat);
+	announceIdea("Copy Cat", copyCat02->getBrain()->getIdea(0));
+	announceIdea("Copy Cat", copyCat02->getBrain()->getIdea(1));
+	announceIdea("Copy Cat", copyCat02->getBrain()->getIdea(2));*/
 
 	announce("Deleting");
 	//delete the animals	

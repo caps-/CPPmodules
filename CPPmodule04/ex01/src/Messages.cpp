@@ -6,7 +6,7 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:45:55 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 04:30:48 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 12:37:48 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,12 @@ void	animalSound(const std::string &type)
 		std::cout << YEL "<" << BYEL << type << YEL "> " << RST
 			<< "arf! w00f!" << std::endl;
 	}
+}
+
+void	announceIdea(const std::string &type, const std::string &idea)
+{
+	std::cout << YEL << "<" << BYEL << type << YEL << "> " << RST  << idea 
+		<< std::endl;
 }
 
 void	bigAssLine(void)

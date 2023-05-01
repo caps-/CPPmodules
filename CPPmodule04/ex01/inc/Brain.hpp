@@ -6,7 +6,7 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 22:52:19 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 03:20:14 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 12:26:49 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ class Brain
 
 		Brain &operator=(Brain const &src);
 
-//		void	getIdea(idea);
+		std::string	const	&getIdea(int i) const;
+		void				setIdea(int i, std::string const &idea);
 };
 
 #endif

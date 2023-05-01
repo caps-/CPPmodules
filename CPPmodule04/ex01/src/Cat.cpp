@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 20:13:35 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 04:33:55 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 12:22:31 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 /* Trying to get in to the habit of using return ; to immediately exit the
 * funciton. Just seems like good practice. */
 
-Cat::Cat(void) : Animal(), _brain(new Brain()) 
+Cat::Cat(void) : Animal(), _brain(new Brain())
 {
 	announceConstructor("Cat");
 	this->_type = "Cat";
@@ -26,7 +26,7 @@ Cat::Cat(void) : Animal(), _brain(new Brain())
 	return ;
 }
 
-Cat::Cat(Cat const &src) : Animal(), _brain();
+Cat::Cat(Cat const &src) : Animal(), _brain()
 {
 	announceCopy("Cat");
     *this = src;
@@ -53,4 +53,9 @@ void	Cat::makeSound(void) const
 {
 	animalSound("cat");
 	return ;
+}
+
+Brain *Cat::getBrain(void) const
+{
+	return (this->_brain);
 }
