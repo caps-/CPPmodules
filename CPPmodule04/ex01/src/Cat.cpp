@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 20:13:35 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 12:22:31 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 13:11:33 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,12 @@ Cat &Cat::operator=(Cat const &src)
 {
 	announceDeep("Cat");
     if (this != &src)
+	{
         this->_type = src._type;
+		if (this->_brain != NULL)
+			delete(this->_brain);
+		this->_brain = new Brain(*src._brain);
+	}
     return (*this);
 }
 

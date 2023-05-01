@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 12:37:21 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 03:34:53 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 13:12:25 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 #include "Messages.hpp"
 #include <iostream>
 
-Animal::Animal(void) : _type("Unknown")
+Animal::Animal(void) : _type("Blank")
 {
-	announceConstructor("unknown");
+	announceConstructor("Blank");
 	return ;
 }
 

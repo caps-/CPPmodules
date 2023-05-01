@@ -6,7 +6,7 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:45:55 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 12:37:48 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 13:26:58 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	announceTest(std::string const &str)
 
 void	announce(std::string const &str)
 {
-	std::cout << BMAG << "\n[" << MAG << str << BMAG << "]" << std::endl;
+	std::cout << BMAG << "\n[" << RED << str << BMAG << "]" << std::endl;
 	std::cout << BBLK << "-" << RST << std::endl;
 }
 
@@ -52,7 +52,7 @@ void	announceCopy(const std::string &type)
 	}
 	else
 	{
-		std::cout << BMAG << "Unknown Animal constructor has been called." 
+		std::cout << BMAG << "Blank Animal constructor has been called." 
 			<< RST << std::endl;
 	}
 	return ;
@@ -68,7 +68,7 @@ void	announceDeep(const std::string &type)
 	}
 	else
 	{
-		std::cout << MAG << "Unknown Animal has been deep copied. DEEEEEEEP." 
+		std::cout << MAG << "Blank Animal has been deep copied. DEEEEEEEP." 
 			<< RST << std::endl;
 	}
 	return ;
