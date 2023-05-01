@@ -1,51 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Aanimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 12:37:21 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 13:12:25 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 15:22:39 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Aanimal.hpp"
 #include "Colours.hpp"
 #include "Messages.hpp"
 #include <iostream>
 
-Animal::Animal(void) : _type("Blank")
+Aanimal::Aanimal(void) : _type("Blank")
 {
 	announceConstructor("Blank");
 	return ;
 }
 
-Animal::Animal(Animal const &src) 
+Aanimal::Aanimal(Aanimal const &src) 
 {
-	std::cout << CYN << "Animal copy constructor has been called." << RST
+	std::cout << CYN << "Aanimal copy constructor has been called." << RST
 		<< std::endl;
 	*this = src;
 	return ;
 }
 
-Animal::~Animal(void)
+Aanimal::~Aanimal(void)
 {
-	std::cout << BBLK << "Animal destructor has been called." << RST
+	std::cout << BBLK << "Aanimal destructor has been called." << RST
 		<< std::endl;
 	return ;
 }
 
-Animal::Animal(std::string const &type) : _type(type)
+Aanimal::Aanimal(std::string const &type) : _type(type)
 {
-	std::cout << CYN << "Animal type copy constructor has been called." << RST
+	std::cout << CYN << "Aanimal type copy constructor has been called." << RST
 		<< std::endl;
 	return ;
 }
 
-Animal &Animal::operator=(Animal const &src)
+Aanimal &Aanimal::operator=(Aanimal const &src)
 {
-	std::cout << CYN <<  "Animal assignment operator has been overloaded."
+	std::cout << CYN <<  "Aanimal assignment operator has been overloaded."
 		<< RST << std::endl;
 	if (this != &src)
 		this->_type = src._type;
@@ -53,12 +53,12 @@ Animal &Animal::operator=(Animal const &src)
 }
 
 
-std::string const	&Animal::getType(void) const
+std::string const	&Aanimal::getType(void) const
 {
 	return (this->_type);
 }
 
-void	Animal::makeSound(void) const
+void	Aanimal::makeSound(void) const
 {
 	std::cout << GRN << "<" << this->_type << "> " << WHT << "*random noises*"
 		<< RST << std::endl;

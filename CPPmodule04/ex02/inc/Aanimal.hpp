@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Aanimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 18:55:54 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/27 12:29:33 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 15:21:30 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef AANIMAL_HPP
+# define AANIMAL_HPP
 
 # include <string>
 
-class	Animal
+class	Aanimal
 {
 	protected:
 		std::string	_type;
 
 	public:
-		Animal(void);
-		Animal(Animal const &src);
-		Animal(std::string const &type);
-		virtual ~Animal(void);
+		Aanimal(void);
+		Aanimal(Aanimal const &src);
+		Aanimal(std::string const &type);
+		virtual ~Aanimal(void);
 
-		Animal	&operator=(Animal const &src);
+		Aanimal	&operator=(Aanimal const &src);
 
 		std::string const	&getType(void) const;
 		virtual void		makeSound(void) const;

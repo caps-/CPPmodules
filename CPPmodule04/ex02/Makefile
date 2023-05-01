@@ -6,7 +6,7 @@
 #    By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/20 16:15:59 by pwhittin          #+#    #+#              #
-#    Updated: 2023/05/01 13:34:33 by pwhittin         ###   ########.fr        #
+#    Updated: 2023/05/01 15:19:48 by pwhittin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ CFLAGS	= -Wall -Werror -Wextra -std=c++98
 
 #source files
 SRC		= main.cpp \
-		  Animal.cpp \
+		  Aanimal.cpp \
 		  Brain.cpp \
 		  Cat.cpp \
 		  Dog.cpp \

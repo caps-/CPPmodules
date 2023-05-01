@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 13:21:22 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 04:31:47 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 15:18:09 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 /* Trying to get in to the habit of using return ; to immediately exit the
  * funciton. Just seems like good practice. */
-Dog::Dog(void) : Animal()
+Dog::Dog(void) : Aanimal(), _brain(new Brain())
 {
 	announceConstructor("Dog");
 	this->_type = "Dog";
@@ -26,7 +26,7 @@ Dog::Dog(void) : Animal()
 	return ;
 }
 
-Dog::Dog(Dog const &src) : Animal()
+Dog::Dog(Dog const &src) : Aanimal(), _brain(NULL)
 {
 	announceCopy("Dog");
     *this = src;
@@ -45,9 +45,19 @@ Dog &Dog::operator=(Dog const &src)
 {
 	announceDeep("Dog");
     if (this != &src)
+	{
         this->_type = src._type;
+		if (this->_brain != NULL)
+			delete this->_brain;
+		this->_brain = new Brain(*src._brain);
+	}
     
 	return (*this);
+}
+
+Brain	*Dog::getBrain(void) const
+{
+	return (this->_brain);
 }
 
 void    Dog::makeSound(void) const
