@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 19:14:17 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 15:18:19 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/01 15:27:25 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "Colours.hpp"
 #include "Messages.hpp"
 
-void	animalTesting(void)
+int	animalTesting(void)
 {
 	//let's clear the screen
 	system("clear");
@@ -49,8 +49,12 @@ void	animalTesting(void)
 	bigAssLine();
 	std::cout << "\nPress any key to continue .." << std::endl;
 	system("read");
-	
-	//CAT TESTS
+
+	return (0);
+}
+
+int	catTest(void)
+{
 	announceTestType("CAT");
 	announceTest("COPY & BRAIN TESTING");
 	announce("Copying Cat");
@@ -105,7 +109,11 @@ void	animalTesting(void)
 	std::cout << "\nPress any key to continue .." << std::endl;
 	system("read");
 
-	//DOG TESTS
+	return (0);
+}
+
+int	dogTest(void)
+{
 	announceTestType("DOG");
 	announceTest("COPY & BRAIN TESTING");
 	announce("Copying Dog");
@@ -159,10 +167,14 @@ void	animalTesting(void)
 
 	std::cout << "\nPress any key to continue .." << std::endl;
 	system("read");
+
+	return (0);
 }
 
 int	main(void)
 {
 	animalTesting();
+	catTest();
+	dogTest();
 	return (0);
 }
