@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 18:19:16 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 19:53:46 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/02 20:05:02 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,6 @@ void	MateriaSource::learnMateria(AMateria *m)
 		if (this->_techniques[i] == NULL)
 		{
 			this->_techniques[i] = m;
-//			std::cout << "MateriaSource learned the " << m->getType()
-//				<< " technique!" << std::endl
 			std::string const mat = m->getType();
 			announceLearned(mat);
 			return ;
