@@ -6,7 +6,7 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:45:55 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 18:50:49 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/02 15:14:48 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ void	announceCopy(const std::string &type)
 
 void	announceType(const std::string &type)
 {
-	std::cout << BMAG << type << " type constructor has been called." << RST
-		<< std::endl;
+	std::cout << BMAG << type << "AMateria type constructor has been called."
+	   	<< RST << std::endl;
 	return ;
 }
 

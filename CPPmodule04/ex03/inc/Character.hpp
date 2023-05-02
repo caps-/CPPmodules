@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 16:55:10 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 18:49:59 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/02 15:06:59 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define CHARACTER_HPP
 
 # include "AMateria.hpp"
-# include "ICharater.hpp"
+# include "ICharacter.hpp"
 # include <string>
 
 class Character : public ICharacter
@@ -30,7 +30,7 @@ class Character : public ICharacter
 		Character(void);
 		Character(Character const &src);
 		Character(std::string const &name);
-		void ~Character(void);
+		~Character(void);
 
 		Character	&operator=(Character const &src);
 
