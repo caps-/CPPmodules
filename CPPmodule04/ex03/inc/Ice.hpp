@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/01 16:47:48 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 15:07:37 by pwhittin         ###   ########.fr       */
+/*   Created: 2023/05/02 16:45:15 by pwhittin          #+#    #+#             */
+/*   Updated: 2023/05/02 18:53:26 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ class Ice : public AMateria
 {
 	public:
 		Ice(void);
-		Ice(Ice const &src);
-		~Ice(void);
+		Ice(Ice const &src); //might need to change to (const Ice &src)
+		virtual	~Ice(void);
 
 		Ice	&operator=(Ice const &src);
-
-		AMateria	*clone(void) const;
-		void		use(ICharacter &target);
+		
+		virtual AMateria	*clone(void) const;
+		virtual void		use(ICharacter &target);
 };
 
 #endif

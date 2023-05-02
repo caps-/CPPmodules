@@ -6,7 +6,7 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:45:55 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 15:14:48 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/02 18:37:53 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,24 @@
 #include <iostream>
 #include <string>
 
-void	announceTest(std::string const &str)
-{
-	std::cout << BBLK << BAL << RST << std::endl;
-	std::cout << BGRN << "[" << GRN << str << BGRN << "]" << RST << std::endl;
-}
-
-void	announceTestType(std::string const &type)
-{
-	std::cout << BBLK << BAL << RST << std::endl;
-	std::cout << BGGRN << BLK << "\t" << type << " TESTS\t" << RST << RST
-		<< std::endl;
-	return ;
-}
-
+//General, all purpose function to print announcements
 void	announce(std::string const &str)
 {
 	std::cout << BMAG << "\n[" << RED << str << BMAG << "]" << std::endl;
 	std::cout << BBLK << "-" << RST << std::endl;
 }
 
+//Announce the type of test we're doing
+void	announceTest(std::string const &str)
+{
+	std::cout << BBLK << BAL << RST << std::endl;
+	std::cout << BGRN << "[" << GRN << str << BGRN << "]" << RST << std::endl;
+}
+
+//Announce constructors
 void	announceConstructor(const std::string &type)
 {
-	std::cout << CYN << type << " defualt constructor has been called." << RST 
+	std::cout << CYN << type << "constructor has been called." << RST 
 		<< std::endl;
 	return ;
 }
@@ -51,8 +46,8 @@ void	announceCopy(const std::string &type)
 
 void	announceType(const std::string &type)
 {
-	std::cout << BMAG << type << "AMateria type constructor has been called."
-	   	<< RST << std::endl;
+	std::cout << BMAG << type << " type constructor has been called." << RST
+		<< std::endl;
 	return ;
 }
 

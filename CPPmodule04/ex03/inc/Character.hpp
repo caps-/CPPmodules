@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/01 16:55:10 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 15:06:59 by pwhittin         ###   ########.fr       */
+/*   Created: 2023/05/02 16:05:29 by pwhittin          #+#    #+#             */
+/*   Updated: 2023/05/02 18:53:02 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 class Character : public ICharacter
 {
 	private:
-		std::string			_name;
-		AMateria			*_inventory[4];
+		std::string	_name;
+		AMateria	*_inventory[4];
 
-		void				_initInventory(void);
-		void				_clearInventory(void);
+		void		_initInventory(void);
+		void		_deleteInventory(void);
 
 	public:
 		Character(void);
@@ -32,14 +32,13 @@ class Character : public ICharacter
 		Character(std::string const &name);
 		~Character(void);
 
-		Character	&operator=(Character const &src);
+		Character &operator=(Character const &src);
 
-		std::string	const	&getName(void) const;
-		void				setName(std::string const &name);
-//		void				equip(AMateria *m);
-//		void				unequip(int idx);
-//		void				use(int idx, ICharater &target);
-//		void				showInventory(void) const;
+		std::string	const &getName(void) const;
+		void		equip(AMateria *m);
+		void		unequip(int index);
+		void		use(int index, ICharacter &target);
+//		void		showInventory(void) const;
 };
 
 #endif

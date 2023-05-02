@@ -6,7 +6,7 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:22:32 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 15:24:52 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/02 18:38:02 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 
 void	announce(std::string const &str);
 void	announceTest(std::string const &str);
-void	announceTestType(std::string const &type);
 void	announceConstructor(std::string const &str);
 void	announceType(std::string const &type);
 void	announceCopy(std::string const &str);

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/01 18:03:32 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 16:01:09 by pwhittin         ###   ########.fr       */
+/*   Created: 2023/05/02 14:47:53 by pwhittin          #+#    #+#             */
+/*   Updated: 2023/05/02 18:57:01 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 #include <iostream>
 #include <string>
 
-AMateria::AMateria(void) : _type("AMateria")
+AMateria::AMateria(void) : _type("Default")
 {
-	announceConstructor("AMateria");
+	announceConstructor("Default");
 	return ;
 }
 
@@ -42,9 +42,9 @@ AMateria::~AMateria(void)
 
 AMateria &AMateria::operator=(AMateria const &src)
 {
+	announceDeep("AMateria");
 	if (this != &src)
 		this->_type = src._type;
-	announceDeep("AMateria");
 	return (*this);
 }
 
@@ -53,11 +53,8 @@ std::string const	&AMateria::getType(void) const
 	return (this->_type);
 }
 
-/* Write anounce function for this and figure out how to pass &target to it.
- * Maybe std::string const targetName = target.getName or something? */
 void	AMateria::use(ICharacter &target)
 {
-	std::cout << "*materia is being used against " << target.getName() << "*"
-		<< RST << std::endl;
-	return ;
+	std::cout << "unkown materia used against " << target.getName()
+		<< std::endl;
 }

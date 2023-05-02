@@ -5,50 +5,94 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/02 15:31:09 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 15:57:05 by pwhittin         ###   ########.fr       */
+/*   Created: 2023/05/02 18:19:16 by pwhittin          #+#    #+#             */
+/*   Updated: 2023/05/02 19:12:17 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Colours.hpp"
 #include "MateriaSource.hpp"
+#include "Colours.hpp"
 #include "Messages.hpp"
+#include <iostream>
 
 MateriaSource::MateriaSource(void)
 {
-	std::cout << "MateriaSource ctor called" << std::endl;
-	this->initTemplates();
+	announceConstructor("MateriaSource");
+	this->_initTechniques();
 	return ;
 }
 
 MateriaSource::MateriaSource(MateriaSource const &src)
 {
-	std::cout << "MateriaSource copy ctor called" << std::endl;
-	this->initTemplates();
+	announceCopy("MateriaSource");
+	this->_initTechniques();
 	*this = src;
 	return ;
 }
 
 MateriaSource::~MateriaSource(void)
 {
-	std::cout << "MateriaSource dtor called" << std::endl;
-	this->deleteTemplates();
+	announceDestructor("MateriaSource");
+	this->_deleteTechniques();
 	return ;
 }
 
 MateriaSource	&MateriaSource::operator=(MateriaSource const &src)
 {
-	std::cout << "MateriaSource op overoad called" << std::endl;
-	this->deleteTemplates();
+	announceDeep("MateriaSource");
+	this->_deleteTechniques();
 	for (int i = 0; i < 4; i++)
 	{
-		if (src._templates[i] = NULL)
-			this->_templates[i] = src._templates[i]->clone();
+		if (src._techniques[i] != NULL)
+			this->_techniques[i] = src._techniques[i]->clone();
 	}
 	return (*this);
 }
 
-void	MateriaSource::learnMateria(AMateria*)
+void	MateriaSource::learnMateria(AMateria *m)
 {
-	
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_techniques[i] == NULL)
+		{
+			this->_techniques[i] = m;
+			std::cout << "MateriaSource learned the " << m->getType()
+				<< " technique!" << std::endl;
+			return ;
+		}
+	}
+}
+
+AMateria	*MateriaSource::createMateria(std::string const &type)
+{
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_techniques[i] && this->_techniques[i]->getType() == type)
+		{
+			std::cout << "MateriaSource learning the " << type
+				<< " technique!" << std::endl;
+			return (this->_techniques[i]->clone());
+		}
+	}
+	return (NULL);
+}
+
+void	MateriaSource::_initTechniques(void)
+{
+	for (int i = 0; i < 4; i++)
+		this->_techniques[i] = NULL;
+	return ;
+}
+
+void	MateriaSource::_deleteTechniques(void)
+{
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_techniques[i] != NULL)
+		{
+			delete this->_techniques[i];
+			this->_techniques[i] = NULL;
+		}
+	}
+	return ;
 }
