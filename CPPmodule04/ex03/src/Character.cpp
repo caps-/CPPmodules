@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:10:10 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 19:02:07 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/02 19:59:20 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ Character::Character(Character const &src)
 
 Character::Character(std::string const &name) : _name(name)
 {
-	std::cout << RED << "name constructor called, need to make announce func"
-		<< RST << std::endl;
+    std::string const n = this->getName();
+	announceName(n);
 	this->_initInventory();
 	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:45:55 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 18:37:53 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/02 19:58:58 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,41 @@ void	announceTest(std::string const &str)
 //Announce constructors
 void	announceConstructor(const std::string &type)
 {
-	std::cout << CYN << type << "constructor has been called." << RST 
+	std::cout << MAG << type << " constructor has been called." << RST 
 		<< std::endl;
 	return ;
 }
 
 void	announceCopy(const std::string &type)
 {
-	std::cout << BMAG << type << " copy constructor has been called." << RST
+	std::cout << MAG << type << " copy constructor has been called." << RST
 		<< std::endl;
+	return ;
+}
+
+void	announceName(std::string const &n)
+{
+	std::cout << YEL << n << MAG << " name constructor has been called." << RST
+		<< std::endl;
+	return ;
+}
+
+void	announceLearned(std::string const &m)
+{
+	if (m == "cure")
+	{
+		std::cout << WHT << "MateriaSource has learned the "
+		<< BMAG << m << WHT << " technique!" <<std::endl;
+		return ;
+	}
+	std::cout << WHT << "MateriaSource has learned the "
+	<< CYN << m << WHT << " technique!" <<std::endl;
 	return ;
 }
 
 void	announceType(const std::string &type)
 {
-	std::cout << BMAG << type << " type constructor has been called." << RST
+	std::cout << MAG << type << " type constructor has been called." << RST
 		<< std::endl;
 	return ;
 }
