@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 18:07:49 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 19:03:19 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/03 16:03:09 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ AMateria	*Ice::clone(void) const
 
 void	Ice::use(ICharacter &target)
 {
-	std::cout << BBLU << "shoots ice at " << target.getName() << RST
-		<< std::endl;
+	std::string const n = target.getName();
+	announceUseIce(n);
 }

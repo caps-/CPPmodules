@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:10:10 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 19:59:20 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/03 15:59:20 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,14 +102,14 @@ void	Character::unequip(int index)
 
 void	Character::use(int index, ICharacter &target)
 {
-	if (index < 0 || index > 4)
+	if (index < 0 || index >= 4)
 	{
-		std::cout << "can't use that!" << std::endl;
+		announceCantUse(this->_name);
 		return ;
 	}
 	if (this->_inventory[index] != NULL)
 	{
-		std::cout << this->_name << ": ";
+		std::cout << YEL << this->_name << " ";
 		this->_inventory[index]->use(target);
 	}
 	return ;

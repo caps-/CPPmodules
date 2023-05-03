@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 18:13:41 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 18:18:31 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/03 16:02:30 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ AMateria *Cure::clone(void) const
 
 void	Cure::use(ICharacter &target)
 {
-	std::cout << BGRN << "heals " << target.getName() << RST << std::endl;
+	std::string const n = target.getName();
+	announceUseCure(n);
 }

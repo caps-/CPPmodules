@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 18:19:16 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 20:05:02 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/03 15:16:06 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,10 @@ AMateria	*MateriaSource::createMateria(std::string const &type)
 	{
 		if (this->_techniques[i] && this->_techniques[i]->getType() == type)
 		{
-			std::cout << "MateriaSource learning the " << type
-				<< " technique!" << std::endl;
+		/*	std::cout << "MateriaSource learning the " << type
+				<< " technique!" << std::endl;*/
+//			std::string const t = type();
+			announceLearning(type);
 			return (this->_techniques[i]->clone());
 		}
 	}

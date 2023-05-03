@@ -6,12 +6,14 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:50:24 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/04/29 01:55:04 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/03 15:05:30 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COLOURS_HPP
 # define COLOURS_HPP
+
+# define BOLD	"\e[1m"
 
 //regular degular
 # define BLK	"\e[30m"
