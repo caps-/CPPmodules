@@ -6,7 +6,7 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:45:55 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/02 20:05:05 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/03 13:24:16 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ void	announce(std::string const &str)
 	std::cout << BBLK << "-" << RST << std::endl;
 }
 
+//Announce the type of test we're doing
+void	announceTestCategory(std::string const &str)
+{
+	std::cout << BBLK << BAL << RST << std::endl;
+	std::cout << BGGRN << "\t" << BLK << str << BGRN << "\t" << RST << std::endl;
+}
 //Announce the type of test we're doing
 void	announceTest(std::string const &str)
 {
