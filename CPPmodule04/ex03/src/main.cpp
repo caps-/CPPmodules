@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:36:51 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/03 16:14:48 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/03 16:58:50 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void test01(void)
     delete bob;
     delete alice;
     delete src;
-
 	pressAnyKey();
 
 	announceTestCategory("MY TEST");
@@ -56,6 +55,7 @@ void test01(void)
     tmp2 = src2->createMateria("cure");
     player1->equip(tmp2);
     ICharacter* player2 = new Character("Bob");
+	pressAnyKey();
 
 	announceTest("Time for some action");
     player1->use(0, *player2);
@@ -69,6 +69,7 @@ void test01(void)
     player1->unequip(1);
     player1->unequip(2);
     player1->unequip(3);
+	pressAnyKey();
 	
 	announceTest("Delete everything and we're done!");
 	delete player2;
