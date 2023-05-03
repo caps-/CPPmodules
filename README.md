@@ -9,7 +9,7 @@
 - [CPP Module 03](https://github.com/caps-/CPPmodules/tree/master/CPPmodule03) -
 100/100
 - [CPP Module 04](https://github.com/caps-/CPPmodules/tree/master/CPPmodule04) -
-WIP
+100/100
 
 
 ## Stuff to read
