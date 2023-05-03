@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 20:13:35 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 14:18:54 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/03 16:56:19 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ Cat::Cat(Cat const &src) : Aanimal(), _brain()
 Cat::~Cat(void)
 {
 	announceDestructor("Cat");
+	delete this->_brain;
 
     return ;
 }

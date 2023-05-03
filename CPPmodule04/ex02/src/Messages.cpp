@@ -6,7 +6,7 @@
 /*   By: pwhittin <pwhittin@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:45:55 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 15:19:06 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/03 16:57:02 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,11 @@ void	announceDestructor(const std::string &type)
 	if (type == "Cat" || type == "Dog")
 	{
 		std::cout << BBLK << type << " destructor has been called." 
+			<< RST << std::endl;
+	}
+	if (type == "Brain")
+	{
+		std::cout << BBLK << "Brain destructor has been called." 
 			<< RST << std::endl;
 	}
 	else

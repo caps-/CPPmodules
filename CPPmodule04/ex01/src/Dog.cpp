@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 13:21:22 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 15:12:03 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/03 16:55:35 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ Dog::Dog(Dog const &src) : Animal(), _brain(NULL)
 Dog::~Dog(void)
 {
 	announceDestructor("Dog");
+	delete this->_brain;
 
 	return ;
 }
