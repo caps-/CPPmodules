@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 18:55:54 by pwhittin          #+#    #+#             */
-/*   Updated: 2023/05/01 15:55:33 by pwhittin         ###   ########.fr       */
+/*   Updated: 2023/05/03 16:27:49 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 # include <string>
 
-/* const = 0 makes the function a pure virtual function. This means that it can't
- * be instantiated on it's own, and instead a derived class that uses the pure
- * virtual function/method has to be used instead. 
+/* const = 0 makes the function a pure virtual function. This means that it 
+ * can't be instantiated on it's own, and instead a derived class that uses the 
+ * pure virtual function/method has to be used instead. 
  *
- * In other words, unless an object is created using or deriving from the Aanimal
- * class it won't be able to use the makeSound() function.
+ * In other words, unless an object is created using or deriving from the 
+ * Aanimal class it won't be able to use the makeSound() function.
  *
  * This ALSO means that this Aanimal class is now an ABSTRACT class. Cool! */
 class	Aanimal
